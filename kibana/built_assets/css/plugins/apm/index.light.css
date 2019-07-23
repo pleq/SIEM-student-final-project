@@ -1,0 +1,10 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+/* APM plugin styles */
+.apmReactRoot {
+  background-color: #FFF;
+  overflow-x: auto; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL2FwbS9wdWJsaWMvaW5kZXguc2NzcyIsImJ1aWxkL25vZGVfbW9kdWxlcy9AZWxhc3RpYy9ldWkvc3JjL2dsb2JhbF9zdHlsaW5nL3ZhcmlhYmxlcy9fY29sb3JzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBWUE7RUFDRSxxQkFBb0I7RUFDcEIscUJBQW9CO0VBQ3BCLG1CQUFrQixFQUNuQjs7QUNiRCx1QkFBdUI7QUFTdkI7RUFDRSx1QkNDdUI7RURBdkIsaUJBQWdCLEVBQ2pCIiwiZmlsZSI6ImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvYXBtL3B1YmxpYy9pbmRleC5zY3NzIn0= */

@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  paths:
+  - c:\xampp\apache\logs\access.log
+  - c:\xampp\apache\logs\error.log
+  scan_frequency: 3s 
+output.logstash:
+  hosts: ["localhost:5044"]

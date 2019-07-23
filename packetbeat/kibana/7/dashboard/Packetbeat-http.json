@@ -1,0 +1,161 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+                "title": "HTTP Transactions [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": false, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"HTTP Transactions [Packetbeat] ECS\"}"
+            }, 
+            "id": "Web-transactions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:21:31.922Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"http\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"http\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"http\", \"type\": \"phrase\"}, \"key\": \"type\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"highlight\": {\"fields\": {\"*\": {}}, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"]}, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"http.response.status_code: [300 TO *]\"}}, \"language\": \"lucene\"}, \"index\": \"packetbeat-*\"}"
+                }, 
+                "title": "HTTP error codes [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Unique count of type\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": false, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"type\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"HTTP Status Code\", \"missingBucketLabel\": \"Missing\", \"field\": \"http.response.status_code\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"HTTP error codes [Packetbeat] ECS\"}"
+            }, 
+            "id": "HTTP-error-codes-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"http\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"http\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"http\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"range\": {\"http.response.status_code\": {\"gte\": 200, \"lte\": 299}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"200 to 299\", \"disabled\": false, \"alias\": null, \"params\": {\"lt\": 299, \"gte\": 200}, \"key\": \"http.response.status_code\", \"negate\": true, \"type\": \"range\"}, \"$state\": {\"store\": \"appState\"}}], \"highlight\": {\"fields\": {\"*\": {}}, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"]}, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"index\": \"packetbeat-*\"}"
+                }, 
+                "title": "HTTP error codes evolution [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"line\", \"interpolate\": \"linear\", \"radiusRatio\": 9, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}}], \"yAxis\": {}, \"smoothLines\": false, \"times\": [], \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"drawLinesBetweenPoints\": true, \"type\": \"line\", \"defaultYExtents\": false, \"radiusRatio\": 9, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"showCircles\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"HTTP Status Code\", \"missingBucketLabel\": \"Missing\", \"field\": \"http.response.status_code\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"HTTP error codes evolution [Packetbeat] ECS\"}"
+            }, 
+            "id": "HTTP-error-codes-evolution-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+                "title": "Total number of HTTP transactions [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 60, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addLegend\": false, \"fontSize\": \"37\", \"handleNoResults\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}], \"title\": \"Total number of HTTP transactions [Packetbeat] ECS\"}"
+            }, 
+            "id": "Total-number-of-HTTP-transactions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+                "title": "HTTP status codes for the top queries [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": false, \"type\": \"pie\", \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"shareYAxis\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"HTTP Query\", \"missingBucketLabel\": \"Missing\", \"field\": \"query\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"size\": 5, \"order\": \"desc\", \"row\": false}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"split\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"HTTP Status Code\", \"missingBucketLabel\": \"Missing\", \"field\": \"http.response.status_code\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 10}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}], \"title\": \"HTTP status codes for the top queries [Packetbeat] ECS\"}"
+            }, 
+            "id": "HTTP-codes-for-the-top-queries-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+                "title": "Top 10 HTTP requests [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"url.full\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"bucket\"}], \"title\": \"Top 10 HTTP requests [Packetbeat] ECS\"}"
+            }, 
+            "id": "Top-10-HTTP-requests-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"http\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"http\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"http\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"packetbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "HTTP Transactions Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-19T00:21:43.886Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 20, \"y\": 0, \"w\": 36, \"x\": 12}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"1\", \"id\": \"Web-transactions-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 15, \"y\": 35, \"w\": 24, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"2\", \"id\": \"HTTP-error-codes-ecs\"}, {\"gridData\": {\"i\": \"3\", \"h\": 15, \"y\": 35, \"w\": 24, \"x\": 24}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"3\", \"id\": \"HTTP-error-codes-evolution-ecs\"}, {\"gridData\": {\"i\": \"4\", \"h\": 20, \"y\": 0, \"w\": 12, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"4\", \"id\": \"Navigation-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 15, \"y\": 20, \"w\": 12, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"defaultColors\": {\"0 - 100\": \"rgb(0,104,55)\"}}}, \"panelIndex\": \"5\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Total-number-of-HTTP-transactions-ecs\"}, {\"gridData\": {\"i\": \"6\", \"h\": 15, \"y\": 20, \"w\": 36, \"x\": 12}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"6\", \"id\": \"HTTP-codes-for-the-top-queries-ecs\"}, {\"gridData\": {\"i\": \"7\", \"h\": 25, \"y\": 50, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"panelIndex\": \"7\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Top-10-HTTP-requests-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] HTTP ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-HTTP-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:26.207Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

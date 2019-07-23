@@ -1,0 +1,137 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Flows-Search-ecs", 
+                "title": "Top Hosts Creating Traffic [Packetbeat Flows] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Source Bytes\"}, \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": true, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Source Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Source IP\", \"missingBucketLabel\": \"Missing\", \"field\": \"source.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Top Hosts Creating Traffic [Packetbeat Flows] ECS\"}"
+            }, 
+            "id": "Top-hosts-creating-traffic-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Flows-Search-ecs", 
+                "title": "Connections over time [Packetbeat Flows] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Unique Flows\"}, \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": true, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"flow.id\", \"customLabel\": \"Unique Flows\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Connections over time [Packetbeat Flows] ECS\"}"
+            }, 
+            "id": "Connections-over-time-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Flows-Search-ecs", 
+                "title": "Top Hosts Receiving Traffic [Packetbeat Flows] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Destination Bytes\"}, \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": true, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Destination Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Destination IP\", \"missingBucketLabel\": \"Missing\", \"field\": \"destination.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Top Hosts Receiving Traffic [Packetbeat Flows] ECS\"}"
+            }, 
+            "id": "Top-hosts-receiving-traffic-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Flows-Search-ecs", 
+                "title": "Network Traffic Between Hosts [Packetbeat Flows] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Source Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Destination Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"2\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Source IP\", \"missingBucketLabel\": \"Missing\", \"field\": \"source.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"bucket\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Destination IP\", \"missingBucketLabel\": \"Missing\", \"field\": \"destination.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"4\", \"schema\": \"bucket\"}], \"title\": \"Network Traffic Between Hosts [Packetbeat Flows] ECS\"}"
+            }, 
+            "id": "Network-traffic-between-your-hosts-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "type", 
+                    "event.start", 
+                    "event.end", 
+                    "source.ip", 
+                    "source.port", 
+                    "destination.ip", 
+                    "destination.port", 
+                    "source.bytes", 
+                    "destination.bytes"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"type: flow\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Flows Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Flows-Search-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"*\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 35, \"y\": 25, \"w\": 24, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"1\", \"id\": \"Top-hosts-creating-traffic-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 20, \"y\": 0, \"w\": 12, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"2\", \"id\": \"Navigation-ecs\"}, {\"gridData\": {\"i\": \"3\", \"h\": 25, \"y\": 0, \"w\": 36, \"x\": 12}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"3\", \"id\": \"Connections-over-time-ecs\"}, {\"gridData\": {\"i\": \"4\", \"h\": 35, \"y\": 25, \"w\": 24, \"x\": 24}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"4\", \"id\": \"Top-hosts-receiving-traffic-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 35, \"y\": 60, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"panelIndex\": \"5\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Network-traffic-between-your-hosts-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] Flows ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Flows-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:25.168Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

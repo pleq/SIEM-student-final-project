@@ -1,0 +1,193 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "Thrift-transactions-ecs", 
+                "title": "Thrift requests per minute [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"addTimeMarker\": false, \"addLegend\": false, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"date_histogram\", \"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"m\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Thrift requests per minute ECS\"}"
+            }, 
+            "id": "Thrift-requests-per-minute-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "Thrift-errors-ecs", 
+                "title": "Thrift RPC Errors [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"smoothLines\": false, \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": false, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"date_histogram\", \"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Thrift RPC Errors ECS\"}"
+            }, 
+            "id": "Thrift-RPC-Errors-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Thrift-transactions-ecs", 
+                "title": "Slowest Thrift RPC methods [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {\"field\": \"event.duration\"}, \"type\": \"avg\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"method\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 10}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}], \"title\": \"Slowest Thrift RPC methods [Packetbeat] ECS\"}"
+            }, 
+            "id": "Slowest-Thrift-RPC-methods-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Thrift-transactions-ecs", 
+                "title": "Thrift response times percentiles [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"seriesParams\": [{\"type\": \"line\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Percentiles of event.duration\"}, \"mode\": \"normal\", \"show\": \"true\"}], \"type\": \"line\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"defaultYExtents\": false, \"times\": [], \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Percentiles of event.duration\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}]}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"percents\": [75, 99, 99.5]}, \"type\": \"percentiles\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Thrift response times percentiles [Packetbeat] ECS\"}"
+            }, 
+            "id": "Thrift-response-times-percentiles-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "Thrift-transactions-ecs", 
+                "title": "Top Thrift-RPC methods  [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"addTimeMarker\": false, \"addLegend\": false, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"terms\", \"params\": {\"orderBy\": \"1\", \"field\": \"method\", \"order\": \"desc\", \"size\": 5}, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Top Thrift-RPC methods ECS\"}"
+            }, 
+            "id": "Top-Thrift-RPC-methods-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "Thrift-errors-ecs", 
+                "title": "Top Thrift-RPC calls with errors [Packetbeat] ECS", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"defaultYExtents\": false, \"shareYAxis\": true, \"addTooltip\": true, \"mode\": \"stacked\", \"addLegend\": false}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"terms\", \"params\": {\"orderBy\": \"1\", \"field\": \"method\", \"order\": \"desc\", \"size\": 5}, \"id\": \"2\", \"schema\": \"segment\"}]}"
+            }, 
+            "id": "Top-Thrift-RPC-calls-with-errors-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "method", 
+                    "type", 
+                    "path", 
+                    "event.duration", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"thrift\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"thrift\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"thrift\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"type: thrift\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"]}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Thrift Transactions Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "Thrift-transactions-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "method", 
+                    "type", 
+                    "path", 
+                    "event.duration", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"status\": {\"query\": \"OK\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"OK\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"OK\", \"type\": \"phrase\"}, \"key\": \"status\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"event.dataset\": {\"query\": \"thrift\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"thrift\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"thrift\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"type: thrift\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"pre_tags\": [\"@kibana-highlighted-field@\"], \"post_tags\": [\"@/kibana-highlighted-field@\"]}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Thrift Errors [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "Thrift-errors-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Navigation-ecs\", \"size_x\": 3, \"size_y\": 4, \"panelIndex\": 1, \"col\": 1, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Thrift-requests-per-minute-ecs\", \"size_x\": 5, \"size_y\": 4, \"panelIndex\": 2, \"col\": 4, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Thrift-RPC-Errors-ecs\", \"size_x\": 4, \"size_y\": 4, \"panelIndex\": 3, \"col\": 9, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Slowest-Thrift-RPC-methods-ecs\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 4, \"col\": 1, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"Thrift-response-times-percentiles-ecs\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 5, \"col\": 7, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"Top-Thrift-RPC-methods-ecs\", \"size_x\": 6, \"size_y\": 4, \"panelIndex\": 6, \"col\": 1, \"row\": 8}, {\"type\": \"visualization\", \"id\": \"Top-Thrift-RPC-calls-with-errors-ecs\", \"size_x\": 6, \"size_y\": 4, \"panelIndex\": 7, \"col\": 7, \"row\": 8}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] Thrift performance ECS", 
+                "uiStateJSON": "{\"P-4\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}}", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Thrift-performance-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:32.418Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

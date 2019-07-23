@@ -1,0 +1,240 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra ResponseKeyspace [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"listeners\": {}, \"params\": {\"legendPosition\": \"right\", \"isDonut\": true, \"addTooltip\": true, \"shareYAxis\": true, \"addLegend\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.result.rows.meta.keyspace\", \"order\": \"desc\", \"size\": 10}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.result.rows.meta.table\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}], \"title\": \"Cassandra ResponseKeyspace ECS\"}"
+            }, 
+            "id": "Cassandra-ResponseKeyspace-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra ResponseType [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"listeners\": {}, \"params\": {\"legendPosition\": \"right\", \"isDonut\": false, \"addTooltip\": true, \"shareYAxis\": true, \"addLegend\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.result.type\", \"order\": \"desc\", \"size\": 10}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Cassandra ResponseType ECS\"}"
+            }, 
+            "id": "Cassandra-ResponseType-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra ResponseTime [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"scale\": \"square root\", \"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"line\", \"interpolate\": \"cardinal\", \"radiusRatio\": 9, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Percentiles of event.duration\"}}], \"yAxis\": {}, \"smoothLines\": true, \"times\": [], \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"drawLinesBetweenPoints\": true, \"type\": \"line\", \"defaultYExtents\": false, \"radiusRatio\": 9, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"square root\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Percentiles of event.duration\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"showCircles\": true}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"percents\": [5, 25, 50, 75, 95]}, \"type\": \"percentiles\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Cassandra ResponseTime [Packetbeat] ECS\"}"
+            }, 
+            "id": "Cassandra-ResponseTime-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra RequestCount [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"listeners\": {}, \"params\": {\"scale\": \"square root\", \"showCircles\": true, \"yAxis\": {}, \"smoothLines\": true, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"radiusRatio\": 9, \"drawLinesBetweenPoints\": true, \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Cassandra RequestCount ECS\"}"
+            }, 
+            "id": "Cassandra-RequestCount-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra Ops [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"listeners\": {}, \"params\": {\"legendPosition\": \"right\", \"isDonut\": true, \"addTooltip\": true, \"shareYAxis\": true, \"addLegend\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.request.headers.op\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.headers.op\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}], \"title\": \"Cassandra Ops ECS\"}"
+            }, 
+            "id": "Cassandra-Ops-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra RequestCountStackByType [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.request.headers.op\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Cassandra RequestCountStackByType ECS\"}"
+            }, 
+            "id": "Cassandra-RequestCountStackByType-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra ResponseCountStackByType [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.headers.op\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Cassandra ResponseCountStackByType ECS\"}"
+            }, 
+            "id": "Cassandra-ResponseCountStackByType-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra RequestCountByType [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"listeners\": {}, \"params\": {\"scale\": \"log\", \"showCircles\": true, \"yAxis\": {}, \"smoothLines\": true, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"radiusRatio\": \"13\", \"drawLinesBetweenPoints\": false, \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.request.headers.op\", \"order\": \"desc\", \"size\": 10}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}, {\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"4\", \"schema\": \"radius\"}], \"title\": \"Cassandra RequestCountByType ECS\"}"
+            }, 
+            "id": "Cassandra-RequestCountByType-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}}"
+                }, 
+                "savedSearchId": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+                "title": "Cassandra ResponseCountByType [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"listeners\": {}, \"params\": {\"scale\": \"log\", \"showCircles\": true, \"yAxis\": {}, \"smoothLines\": true, \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"radiusRatio\": \"15\", \"drawLinesBetweenPoints\": false, \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"date_histogram\", \"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\"}, {\"type\": \"terms\", \"params\": {\"orderBy\": \"1\", \"field\": \"cassandra.response.headers.op\", \"order\": \"desc\", \"size\": 10}, \"id\": \"3\", \"schema\": \"group\"}, {\"type\": \"count\", \"params\": {}, \"id\": \"4\", \"schema\": \"radius\"}], \"title\": \"Cassandra: ResponseCountByType ECS\"}"
+            }, 
+            "id": "Cassandra-ResponseCountByType-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "cassandra.request.query", 
+                    "cassandra.response.result.rows.meta.keyspace", 
+                    "cassandra.response.result.rows.meta.table", 
+                    "cassandra.response.result.rows.num_rows"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"cassandra.request.headers.op\": {\"query\": \"QUERY\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"QUERY\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"QUERY\", \"type\": \"phrase\"}, \"key\": \"cassandra.request.headers.op\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"cassandra.response.headers.op\": {\"query\": \"ERROR\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"ERROR\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"ERROR\", \"type\": \"phrase\"}, \"key\": \"cassandra.response.headers.op\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Cassandra Query Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "Cassandra-QueryView-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"cassandra\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"cassandra\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"cassandra\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"packetbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Cassandra Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "eaa83e60-190b-11e9-be0d-adde5066235e-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"type\": \"visualization\", \"id\": \"Cassandra-ResponseKeyspace-ecs\", \"size_x\": 3, \"size_y\": 2, \"panelIndex\": 3, \"col\": 10, \"row\": 3}, {\"type\": \"visualization\", \"id\": \"Cassandra-ResponseType-ecs\", \"size_x\": 3, \"size_y\": 2, \"panelIndex\": 4, \"col\": 7, \"row\": 3}, {\"type\": \"visualization\", \"id\": \"Cassandra-ResponseTime-ecs\", \"size_x\": 12, \"size_y\": 2, \"panelIndex\": 9, \"col\": 1, \"row\": 5}, {\"type\": \"visualization\", \"id\": \"Cassandra-RequestCount-ecs\", \"size_x\": 9, \"size_y\": 2, \"panelIndex\": 10, \"col\": 4, \"row\": 1}, {\"type\": \"visualization\", \"id\": \"Cassandra-Ops-ecs\", \"size_x\": 3, \"size_y\": 2, \"panelIndex\": 11, \"col\": 4, \"row\": 3}, {\"type\": \"visualization\", \"id\": \"Cassandra-RequestCountStackByType-ecs\", \"size_x\": 12, \"size_y\": 2, \"panelIndex\": 15, \"col\": 1, \"row\": 7}, {\"type\": \"visualization\", \"id\": \"Cassandra-ResponseCountStackByType-ecs\", \"size_x\": 12, \"size_y\": 2, \"panelIndex\": 16, \"col\": 1, \"row\": 9}, {\"type\": \"visualization\", \"id\": \"Cassandra-RequestCountByType-ecs\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 17, \"col\": 1, \"row\": 11}, {\"type\": \"visualization\", \"id\": \"Cassandra-ResponseCountByType-ecs\", \"size_x\": 6, \"size_y\": 3, \"panelIndex\": 18, \"col\": 7, \"row\": 11}, {\"type\": \"visualization\", \"id\": \"Navigation-ecs\", \"size_x\": 3, \"size_y\": 4, \"panelIndex\": 19, \"col\": 1, \"row\": 1}, {\"sort\": [\"@timestamp\", \"desc\"], \"type\": \"search\", \"id\": \"Cassandra-QueryView-ecs\", \"size_x\": 12, \"size_y\": 3, \"panelIndex\": 20, \"col\": 1, \"columns\": [\"cassandra.request.query\", \"cassandra.response.result.rows.meta.keyspace\", \"cassandra.response.result.rows.meta.table\", \"cassandra.response.result.rows.num_rows\"], \"row\": 14}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] Cassandra ECS", 
+                "uiStateJSON": "{\"P-17\": {\"vis\": {\"legendOpen\": false}}, \"P-18\": {\"vis\": {\"legendOpen\": false}}, \"P-10\": {\"vis\": {\"legendOpen\": false}}}", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Cassandra-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:20.964Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

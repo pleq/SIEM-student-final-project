@@ -1,0 +1,18 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+.tilemap {
+  margin-bottom: 6px;
+  border: 1px solid #D3DAE6;
+  position: relative; }
+
+/**
+* 1. Visualizations have some padding by default but tilemaps look nice flush against the edge to maximize viewing
+* space.
+*/
+.tile_map {
+  padding: 0;
+  /* 1. */ }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9zcmMvc3JjL2xlZ2FjeS9jb3JlX3BsdWdpbnMvdGlsZV9tYXAvcHVibGljL190aWxlX21hcC5zY3NzIiwiYnVpbGQvbm9kZV9tb2R1bGVzL0BlbGFzdGljL2V1aS9zcmMvZ2xvYmFsX3N0eWxpbmcvdmFyaWFibGVzL19jb2xvcnMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFZQTtFQUNFLHFCQUFvQjtFQUNwQixxQkFBb0I7RUFDcEIsbUJBQWtCLEVBQ25COztBQ2ZEO0VBQ0UsbUJBQWtCO0VBQ2xCLDBCQ2EwQjtFRFoxQixtQkFBa0IsRUFDbkI7O0FBRUQ7OztFQUdFO0FBRUY7RUFDRSxXQUFVO0VBQUUsUUFBUSxFQUNyQiIsImZpbGUiOiJidWlsZC9raWJhbmEvc3JjL2xlZ2FjeS9jb3JlX3BsdWdpbnMvdGlsZV9tYXAvcHVibGljL2luZGV4LnNjc3MifQ== */

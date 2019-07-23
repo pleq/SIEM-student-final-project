@@ -1,0 +1,336 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+                "title": "HTTP Transactions [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": false, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"HTTP Transactions [Packetbeat] ECS\"}"
+            }, 
+            "id": "Web-transactions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:21:31.922Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"event.type\": {\"query\": \"flow\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"flow\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"flow\", \"type\": \"phrase\"}, \"key\": \"event.type\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"packetbeat-*\", \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "title": "Transaction Types [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"event.dataset\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Transaction Types [Packetbeat] ECS\"}"
+            }, 
+            "id": "DB-transactions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:20:54.634Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Search-ecs", 
+                "title": "Response times percentiles [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"line\", \"interpolate\": \"cardinal\", \"radiusRatio\": 9, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Percentiles of event.duration\"}}], \"yAxis\": {}, \"smoothLines\": true, \"times\": [], \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"drawLinesBetweenPoints\": true, \"type\": \"line\", \"defaultYExtents\": false, \"radiusRatio\": 9, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Percentiles of event.duration\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"showCircles\": true}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"percents\": [75, 95, 99]}, \"type\": \"percentiles\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Response times percentiles [Packetbeat] ECS\"}"
+            }, 
+            "id": "Response-times-percentiles-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:01:49.340Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "Transactions-errors-ecs", 
+                "title": "Errors count over time ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"date_histogram\", \"params\": {\"customInterval\": \"30s\", \"field\": \"@timestamp\", \"interval\": \"custom\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"id\": \"2\", \"schema\": \"segment\"}, {\"type\": \"terms\", \"params\": {\"orderBy\": \"1\", \"field\": \"type\", \"order\": \"desc\", \"size\": 5}, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"New Visualization ECS\"}"
+            }, 
+            "id": "Errors-count-over-time-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:30.350Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Search-ecs", 
+                "title": "Errors vs successful transactions [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"percentage\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"percentage\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"status\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Errors vs successful transactions [Packetbeat] ECS\"}"
+            }, 
+            "id": "Errors-vs-successful-transactions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:02:24.071Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Search-ecs", 
+                "title": "Latency Histogram [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": true, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"event.duration\", \"interval\": 10000000, \"extended_bounds\": {}}, \"type\": \"histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Latency Histogram [Packetbeat] ECS\"}"
+            }, 
+            "id": "Latency-histogram-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:03:54.084Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Client IP Locations (requires GeoIP enrichment) [Packetbeat] ECS", 
+                "uiStateJSON": "{\"mapCenter\": [0, -0.17578125]}", 
+                "version": 1, 
+                "visState": "{\"type\": \"tile_map\", \"params\": {\"mapCenter\": [15, 5], \"mapZoom\": 2, \"colorSchema\": \"Yellow to Red\", \"heatMaxZoom\": 16, \"wms\": {\"selectedTmsLayer\": {\"maxZoom\": 18, \"origin\": \"elastic_maps_service\", \"minZoom\": 0, \"attribution\": \"<p>&#169; <a href=\\\"http://www.openstreetmap.org/copyright\\\">OpenStreetMap</a> contributors | <a href=\\\"https://www.elastic.co/elastic-maps-service\\\">Elastic Maps Service</a></p>&#10;\", \"id\": \"road_map\"}, \"url\": \"https://basemap.nationalmap.gov/arcgis/services/USGSTopo/MapServer/WMSServer\", \"enabled\": false, \"options\": {\"layers\": \"0\", \"styles\": \"\", \"attribution\": \"Maps provided by USGS\", \"format\": \"image/png\", \"version\": \"1.3.0\", \"transparent\": true}}, \"heatBlur\": 15, \"heatRadius\": 25, \"heatMinOpacity\": 0.1, \"legendPosition\": \"bottomright\", \"heatClusterSize\": 1.5, \"heatNormalizeData\": true, \"mapType\": \"Scaled Circle Markers\", \"isDesaturated\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"mapCenter\": {\"lat\": -0.17578097424708533, \"lon\": 0}, \"mapBounds\": {\"bottom_right\": {\"lat\": -84.0160220686566, \"lon\": 259.80468750000006}, \"top_left\": {\"lat\": 83.97925949886205, \"lon\": -259.80468750000006}}, \"useGeocentroid\": true, \"isFilteredByCollar\": true, \"precision\": 2, \"mapZoom\": 2, \"field\": \"client.geo.location\", \"autoPrecision\": true}, \"type\": \"geohash_grid\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Client IP Locations (requires GeoIP enrichment) [Packetbeat] ECS\"}"
+            }, 
+            "id": "Client-locations-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:52:42.404Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "Packetbeat-Search-ecs", 
+                "title": "Response times repartition [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"show\": \"true\"}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"field\": \"event.duration\", \"interval\": 10000000, \"extended_bounds\": {}}, \"type\": \"histogram\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"Response times repartition [Packetbeat] ECS\"}"
+            }, 
+            "id": "Response-times-repartition-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:00:32.530Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Transactions [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"area\", \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Avg Response Time\"}}, {\"showCircles\": true, \"show\": true, \"type\": \"line\", \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-2\", \"lineWidth\": 3.5, \"data\": {\"id\": \"3\", \"label\": \"Count\"}}], \"type\": \"area\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"times\": [], \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Avg Response Time\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}, {\"style\": {}, \"scale\": {\"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"RightAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"right\", \"type\": \"value\", \"id\": \"ValueAxis-2\"}]}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Avg Response Time\"}, \"type\": \"avg\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"DNS Transactions [Packetbeat] ECS\"}"
+            }, 
+            "id": "e3f09730-1b80-11e9-83df-75eebb35951e-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:29:49.161Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "ffc3c0b0-d2d7-11e7-9914-4982455b3063-ecs", 
+                "title": "TLS Sessions [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"true\": \"#7EB26D\", \"false\": \"#E24D42\"}, \"legendOpen\": false}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"type\": \"histogram\"}], \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"grid\": {\"valueAxis\": \"ValueAxis-1\", \"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"times\": [], \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}]}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"customLabel\": \"Sessions per minute\", \"interval\": \"auto\", \"field\": \"@timestamp\", \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"customLabel\": \"Handshake completed\", \"field\": \"tls.handshake_completed\", \"json\": \"\", \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"TLS Sessions ECS\"}"
+            }, 
+            "id": "059fe5e0-d2dd-11e7-9914-4982455b3063-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:33.441Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"http\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"http\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"http\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"packetbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"*\", \"language\": \"lucene\"}}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "HTTP Transactions Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "71908f00-88ca-11e7-ad9c-db80de0bf8d3-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-19T00:21:43.886Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "client.ip", 
+                    "client.port", 
+                    "server.ip", 
+                    "server.port", 
+                    "event.dataset", 
+                    "query", 
+                    "method", 
+                    "event.duration", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"flow\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"flow\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"flow\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Packetbeat Search ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Search-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-19T00:01:10.720Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "client.ip", 
+                    "client.port", 
+                    "server.ip", 
+                    "server.port", 
+                    "event.dataset", 
+                    "query", 
+                    "method", 
+                    "event.duration", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"flow\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"flow\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"flow\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"status\": {\"query\": \"OK\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"OK\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"OK\", \"type\": \"phrase\"}, \"key\": \"status\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "Transactions Errors Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "Transactions-errors-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-19T00:05:18.965Z", 
+            "version": 3
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "server.ip", 
+                    "destination.ip", 
+                    "dns.question.name", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"dns\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"dns\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"dns\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "DNS Protocol [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"meta\": {\"index\": \"packetbeat-*\", \"value\": \"exists\", \"disabled\": false, \"alias\": \"TLS sessions\", \"key\": \"tls.handshake_completed\", \"negate\": false, \"type\": \"exists\"}, \"$state\": {\"store\": \"appState\"}, \"exists\": {\"field\": \"tls.handshake_completed\"}}], \"index\": \"packetbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "TLS Sessions [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "ffc3c0b0-d2d7-11e7-9914-4982455b3063-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:33.441Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "Packetbeat overview dashboard.", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"*\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 10, \"y\": 20, \"w\": 12, \"x\": 12}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"1\", \"id\": \"Web-transactions-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 10, \"y\": 20, \"w\": 12, \"x\": 36}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"2\", \"id\": \"DB-transactions-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 15, \"y\": 45, \"w\": 24, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"5\", \"id\": \"Response-times-percentiles-ecs\"}, {\"gridData\": {\"i\": \"6\", \"h\": 15, \"y\": 60, \"w\": 24, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"6\", \"id\": \"Errors-count-over-time-ecs\"}, {\"gridData\": {\"i\": \"7\", \"h\": 15, \"y\": 45, \"w\": 24, \"x\": 24}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"7\", \"id\": \"Errors-vs-successful-transactions-ecs\"}, {\"gridData\": {\"i\": \"8\", \"h\": 15, \"y\": 60, \"w\": 24, \"x\": 24}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"8\", \"id\": \"Latency-histogram-ecs\"}, {\"gridData\": {\"i\": \"9\", \"h\": 20, \"y\": 0, \"w\": 36, \"x\": 12}, \"embeddableConfig\": {\"mapCollar\": {\"zoom\": 2, \"bottom_right\": {\"lat\": -90, \"lon\": 180}, \"top_left\": {\"lat\": 90, \"lon\": -180}}, \"mapZoom\": 2, \"mapBounds\": {\"bottom_right\": {\"lat\": -54.97761367069625, \"lon\": 153.984375}, \"top_left\": {\"lat\": 54.97761367069628, \"lon\": -153.984375}}}, \"panelIndex\": \"9\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Client-locations-ecs\"}, {\"gridData\": {\"i\": \"10\", \"h\": 15, \"y\": 30, \"w\": 48, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"10\", \"id\": \"Response-times-repartition-ecs\"}, {\"gridData\": {\"i\": \"11\", \"h\": 20, \"y\": 0, \"w\": 12, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"11\", \"id\": \"Navigation-ecs\"}, {\"gridData\": {\"i\": \"12\", \"h\": 10, \"y\": 20, \"w\": 12, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"12\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"e3f09730-1b80-11e9-83df-75eebb35951e-ecs\"}, {\"gridData\": {\"i\": \"13\", \"h\": 10, \"y\": 20, \"w\": 12, \"x\": 24}, \"embeddableConfig\": {}, \"panelIndex\": \"13\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"059fe5e0-d2dd-11e7-9914-4982455b3063-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] Overview ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-Dashboard-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-19T00:31:53.357Z", 
+            "version": 5
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

@@ -1,0 +1,31 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+/**
+ * 1. Override EUI styles.
+ */
+.rollupJobWizardStepActions {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  /* 1 */ }
+
+.rollupJobsRoot {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/**
+ * 1. Ensure panel fills width of parent when search input yields no matching rollup jobs.
+ */
+.rollupJobsListPanel {
+  -webkit-box-flex: 1 !important;
+  -webkit-flex-grow: 1 !important;
+      -ms-flex-positive: 1 !important;
+          flex-grow: 1 !important;
+  /* 1 */ }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL3JvbGx1cC9wdWJsaWMvY3J1ZF9hcHAvX2NydWRfYXBwLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBWUE7RUFDRSxxQkFBb0I7RUFDcEIscUJBQW9CO0VBQ3BCLG1CQUFrQixFQUNuQjs7QUNoQkQ7O0dBRUc7QUFDSDtFQUNFLHVCQUFxQjtFQUFyQiw4QkFBcUI7TUFBckIsb0JBQXFCO1VBQXJCLHNCQUFxQjtFQUFFLE9BQU8sRUFDL0I7O0FBRUQ7RUFDRSxxQkFBYTtFQUFiLHNCQUFhO0VBQWIscUJBQWE7RUFBYixjQUFhLEVBQ2Q7O0FBRUQ7O0dBRUc7QUFDSDtFQUVFLCtCQUF1QjtFQUF2QixnQ0FBdUI7TUFBdkIsZ0NBQXVCO1VBQXZCLHdCQUF1QjtFQUFFLE9BQU8sRUFDakMiLCJmaWxlIjoiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9yb2xsdXAvcHVibGljL2luZGV4LnNjc3MifQ== */

@@ -1,0 +1,12 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+.mkdVis {
+  padding: 8px;
+  width: 100%; }
+
+#markdownVisInput {
+  resize: none; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9zcmMvc3JjL2xlZ2FjeS9jb3JlX3BsdWdpbnMvbWFya2Rvd25fdmlzL3B1YmxpYy9fbWFya2Rvd25fdmlzLnNjc3MiLCJidWlsZC9ub2RlX21vZHVsZXMvQGVsYXN0aWMvZXVpL3NyYy9nbG9iYWxfc3R5bGluZy92YXJpYWJsZXMvX3NpemUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFZQTtFQUNFLHFCQUFvQjtFQUNwQixxQkFBb0I7RUFDcEIsbUJBQWtCLEVBQ25COztBQ2hCRDtFQUNFLGFDRXlCO0VERHpCLFlBQVcsRUFFWjs7QUFFRDtFQUNFLGFBQVksRUFDYiIsImZpbGUiOiJidWlsZC9raWJhbmEvc3JjL2xlZ2FjeS9jb3JlX3BsdWdpbnMvbWFya2Rvd25fdmlzL3B1YmxpYy9pbmRleC5zY3NzIn0= */

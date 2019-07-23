@@ -1,0 +1,219 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS clients pie chart [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": true, \"type\": \"pie\", \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"shareYAxis\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"rpc.cred.machinename\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 16}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"NFS clients pie chart [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-clients-pie-chart-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS operations area chart ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"smoothLines\": true, \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"mode\": \"stacked\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"type\": \"count\", \"params\": {}, \"id\": \"1\", \"schema\": \"metric\"}, {\"type\": \"terms\", \"params\": {\"orderBy\": \"1\", \"field\": \"nfs.opcode\", \"order\": \"desc\", \"size\": 16}, \"id\": \"2\", \"schema\": \"group\"}, {\"type\": \"date_histogram\", \"params\": {\"customInterval\": \"2h\", \"field\": \"@timestamp\", \"interval\": \"auto\", \"min_doc_count\": 1, \"extended_bounds\": {}}, \"id\": \"3\", \"schema\": \"segment\"}], \"title\": \"NFS operations area chart ECS\"}"
+            }, 
+            "id": "NFS-operations-area-chart-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS top group pie chart [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": false, \"type\": \"pie\", \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"shareYAxis\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"rpc.cred.gid\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 16}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"NFS top group pie chart [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-top-group-pie-chart-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS top users pie chart [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": false, \"type\": \"pie\", \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"shareYAxis\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"rpc.cred.uid\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 16}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"NFS top users pie chart [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-top-users-pie-chart-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS response times [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"line\", \"interpolate\": \"cardinal\", \"radiusRatio\": \"9\", \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Median event.duration\"}}], \"yAxis\": {}, \"smoothLines\": true, \"times\": [], \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"drawLinesBetweenPoints\": true, \"type\": \"line\", \"defaultYExtents\": true, \"radiusRatio\": \"9\", \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": true, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Median event.duration\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"showCircles\": true}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"percents\": [50]}, \"type\": \"median\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"NFS response times [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-response-times-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "NFS-errors-search-ecs", 
+                "title": "NFS errors [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"interpolate\": \"linear\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": false, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"nfs.status\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 12}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"NFS errors [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-errors-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS operation table [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Avg Response Time\"}, \"type\": \"avg\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Opcode\", \"missingBucketLabel\": \"Missing\", \"field\": \"nfs.opcode\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 16}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}, {\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"NFS operation table [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-operation-table-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "nfs-ecs", 
+                "title": "NFS Request / Response Sizes [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"Sum of rpc.reply_size\": \"#7EB26D\"}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"line\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"showCircles\": true, \"show\": \"true\", \"type\": \"line\", \"interpolate\": \"linear\", \"radiusRatio\": 9, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Request Size\"}}, {\"showCircles\": true, \"show\": true, \"type\": \"line\", \"interpolate\": \"linear\", \"mode\": \"normal\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"2\", \"label\": \"Response Size\"}}], \"yAxis\": {}, \"smoothLines\": false, \"times\": [], \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"drawLinesBetweenPoints\": true, \"type\": \"line\", \"defaultYExtents\": false, \"radiusRatio\": 9, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"showCircles\": true}, \"aggs\": [{\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Request Size\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Response Size\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"2\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}], \"title\": \"NFS Request / Response Sizes [Packetbeat] ECS\"}"
+            }, 
+            "id": "NFS-bytes-in-slash-out-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Navigation [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"markdown\", \"params\": {\"openLinksInNewTab\": false, \"markdown\": \"### Packetbeat:\\n\\n[Overview](#/dashboard/Packetbeat-Dashboard-ecs)\\n\\n[Network Flows](#/dashboard/Packetbeat-Flows-ecs)\\n\\n[DNS Overview](#/dashboard/65120940-1454-11e9-9de0-f98d1808db8e-ecs) | [Tunneling](#/dashboard/DNS-Unique-Domains-ecs)\\n\\n[DHCPv4 Transactions](#/dashboard/a7b35890-8baa-11e8-9676-ef67484126fb-ecs)\\n\\n[TLS Overview](#/dashboard/tls-sessions-ecs)\\n\\n[HTTP transactions](#/dashboard/Packetbeat-HTTP-ecs)\\n\\nDatabases: [MySQL](#/dashboard/Packetbeat-MySQL-performance-ecs) | [PostgreSQL](#/dashboard/Packetbeat-PgSQL-performance-ecs) | [MongoDB](#/dashboard/Packetbeat-MongoDB-performance-ecs) | [Cassandra](#/dashboard/Packetbeat-Cassandra-ecs)\\n\\nRPC: [Thrift](#/dashboard/Packetbeat-Thrift-performance-ecs)\\n\\nStorage: [NFS](#/dashboard/Packetbeat-NFS-ecs)\", \"fontSize\": 10}, \"aggs\": [], \"title\": \"Navigation [Packetbeat] ECS\"}"
+            }, 
+            "id": "Navigation-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-19T00:18:59.372Z", 
+            "version": 11
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"nfs-ecs\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"nfs-ecs\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"nfs-ecs\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "NFS Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "nfs-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"nfs.status\": {\"query\": \"NFSERR_NOENT\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"NFSERR_NOENT\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"NFSERR_NOENT\", \"type\": \"phrase\"}, \"key\": \"nfs.status\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"nfs.status\": {\"query\": \"NFS_OK\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"NFS_OK\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"NFS_OK\", \"type\": \"phrase\"}, \"key\": \"nfs.status\", \"negate\": true, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}, {\"query\": {\"match\": {\"event.dataset\": {\"query\": \"nfs-ecs\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"nfs-ecs\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"nfs-ecs\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "NFS Error Search [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "NFS-errors-search-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "NFSv3 and NFSv4 transactions over TCP.", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"*\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 25, \"y\": 0, \"w\": 16, \"x\": 16}, \"embeddableConfig\": {\"vis\": {\"legendOpen\": true}}, \"panelIndex\": \"1\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-clients-pie-chart-ecs\"}, {\"gridData\": {\"i\": \"3\", \"h\": 20, \"y\": 55, \"w\": 24, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"3\", \"id\": \"NFS-operations-area-chart-ecs\"}, {\"gridData\": {\"i\": \"4\", \"h\": 10, \"y\": 0, \"w\": 16, \"x\": 32}, \"embeddableConfig\": {\"spy\": {\"mode\": {\"name\": null, \"fill\": false}}, \"vis\": {\"legendOpen\": true}}, \"panelIndex\": \"4\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-top-group-pie-chart-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 15, \"y\": 10, \"w\": 16, \"x\": 32}, \"embeddableConfig\": {\"vis\": {\"legendOpen\": true}}, \"panelIndex\": \"5\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-top-users-pie-chart-ecs\"}, {\"gridData\": {\"i\": \"6\", \"h\": 15, \"y\": 25, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {\"vis\": {\"legendOpen\": false}}, \"panelIndex\": \"6\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-response-times-ecs\"}, {\"gridData\": {\"i\": \"7\", \"h\": 15, \"y\": 40, \"w\": 24, \"x\": 24}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"7\", \"id\": \"NFS-errors-ecs\"}, {\"gridData\": {\"i\": \"8\", \"h\": 20, \"y\": 55, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"panelIndex\": \"8\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-operation-table-ecs\"}, {\"gridData\": {\"i\": \"9\", \"h\": 30, \"y\": 25, \"w\": 24, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"legendOpen\": true}}, \"panelIndex\": \"9\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"NFS-bytes-in-slash-out-ecs\"}, {\"gridData\": {\"i\": \"10\", \"h\": 25, \"y\": 0, \"w\": 16, \"x\": 0}, \"type\": \"visualization\", \"version\": \"7.0.0-SNAPSHOT\", \"panelIndex\": \"10\", \"id\": \"Navigation-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] NFS ECS", 
+                "version": 1
+            }, 
+            "id": "Packetbeat-NFS-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:29.316Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

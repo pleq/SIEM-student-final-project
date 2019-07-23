@@ -1,0 +1,58 @@
+"use strict";
+/*
+ * Copyright Elasticsearch B.V. and/or licensed to Elasticsearch B.V. under one
+ * or more contributor license agreements. Licensed under the Elastic License;
+ * you may not use this file except in compliance with the Elastic License.
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
+const eui_1 = require("@elastic/eui");
+const react_1 = require("@kbn/i18n/react");
+const react_2 = tslib_1.__importStar(require("react"));
+const reporting_panel_content_1 = require("./reporting_panel_content");
+class ScreenCapturePanelContent extends react_2.Component {
+    constructor(props) {
+        super(props);
+        this.renderOptions = () => {
+            if (this.state.isPreserveLayoutSupported) {
+                return (react_2.default.createElement(react_2.Fragment, null,
+                    react_2.default.createElement(eui_1.EuiSwitch, { label: react_2.default.createElement(react_1.FormattedMessage, { id: "xpack.reporting.screenCapturePanelContent.optimizeForPrintingLabel", defaultMessage: "Optimize for printing" }), checked: this.state.usePrintLayout, onChange: this.handlePrintLayoutChange, "data-test-subj": "usePrintLayout" }),
+                    react_2.default.createElement(eui_1.EuiSpacer, { size: "s" })));
+            }
+            return (react_2.default.createElement(react_2.Fragment, null,
+                react_2.default.createElement(eui_1.EuiSpacer, { size: "s" })));
+        };
+        this.handlePrintLayoutChange = (evt) => {
+            this.setState({ usePrintLayout: evt.target.checked });
+        };
+        this.getLayout = () => {
+            if (this.state.usePrintLayout) {
+                return { id: 'print' };
+            }
+            const el = document.querySelector('[data-shared-items-container]');
+            const bounds = el ? el.getBoundingClientRect() : { height: 768, width: 1024 };
+            return {
+                id: this.props.reportType === 'png' ? 'png' : 'preserve_layout',
+                dimensions: {
+                    height: bounds.height,
+                    width: bounds.width,
+                },
+            };
+        };
+        this.getJobParams = () => {
+            return {
+                ...this.props.getJobParams(),
+                layout: this.getLayout(),
+            };
+        };
+        const isPreserveLayoutSupported = props.reportType !== 'png' && props.objectType !== 'visualization';
+        this.state = {
+            isPreserveLayoutSupported,
+            usePrintLayout: false,
+        };
+    }
+    render() {
+        return (react_2.default.createElement(reporting_panel_content_1.ReportingPanelContent, { reportType: this.props.reportType, layoutId: this.getLayout().id, objectType: this.props.objectType, objectId: this.props.objectId, getJobParams: this.getJobParams, options: this.renderOptions(), isDirty: this.props.isDirty, onClose: this.props.onClose }));
+    }
+}
+exports.ScreenCapturePanelContent = ScreenCapturePanelContent;

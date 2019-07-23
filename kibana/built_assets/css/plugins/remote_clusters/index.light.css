@@ -1,0 +1,27 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+/**
+ * 1. Prevent inherited flexbox layout from compressing this element on IE.
+ */
+.remoteClustersConnectionStatus__message {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
+  /* 1 */ }
+
+/**
+ * 1. Override EuiFormRow styles. Otherwise the switch will jump around when toggled on and off,
+ *    as the 'Reset to defaults' link is added to and removed from the DOM.
+ * 2. Fix the positioning.
+ */
+.remoteClusterSkipIfUnavailableSwitch {
+  -webkit-box-pack: start !important;
+  -webkit-justify-content: flex-start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  /* 1 */
+  padding-top: 8px !important; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL3JlbW90ZV9jbHVzdGVycy9wdWJsaWMvc2VjdGlvbnMvcmVtb3RlX2NsdXN0ZXJfbGlzdC9jb21wb25lbnRzL2Nvbm5lY3Rpb25fc3RhdHVzL19pbmRleC5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvcmVtb3RlX2NsdXN0ZXJzL3B1YmxpYy9pbmRleC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVlBO0VBQ0UscUJBQW9CO0VBQ3BCLHFCQUFvQjtFQUNwQixtQkFBa0IsRUFDbkI7O0FDaEJEOztHQUVHO0FBQ0Y7RUFDQyxvQ0FBMkI7TUFBM0IseUNBQTJCO1VBQTNCLDRCQUEyQjtFQUFFLE9BQU8sRUFDckM7O0FDUUQ7Ozs7R0FJRztBQUVIO0VBQ0UsbUNBQXNDO0VBQXRDLCtDQUFzQztNQUF0QyxnQ0FBc0M7VUFBdEMsdUNBQXNDO0VBQUUsT0FBTztFQUMvQyw0QkFBaUMsRUFDbEMiLCJmaWxlIjoiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9yZW1vdGVfY2x1c3RlcnMvcHVibGljL2luZGV4LnNjc3MifQ== */

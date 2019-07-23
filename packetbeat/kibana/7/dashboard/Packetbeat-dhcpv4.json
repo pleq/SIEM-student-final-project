@@ -1,0 +1,153 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{}"
+                }, 
+                "title": "Message Types over Time [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metrics\", \"params\": {\"background_color_rules\": [{\"id\": \"c2cf4410-8ba8-11e8-ae15-bdcba81344e6\"}], \"index_pattern\": \"packetbeat-*\", \"time_field\": \"@timestamp\", \"series\": [{\"line_width\": 1, \"terms_field\": \"dhcpv4.option.message_type\", \"metrics\": [{\"type\": \"count\", \"id\": \"8abe6eb1-8ba9-11e8-ae15-bdcba81344e6\"}], \"color\": \"#68BC00\", \"stacked\": \"none\", \"label\": \"Response\", \"filter\": \"NOT dhcpv4.option.message_type:nak NOT dhcpv4.option.message_type:decline\", \"seperate_axis\": 0, \"split_mode\": \"terms\", \"chart_type\": \"line\", \"point_size\": 1, \"axis_position\": \"right\", \"formatter\": \"number\", \"id\": \"8abe6eb0-8ba9-11e8-ae15-bdcba81344e6\", \"fill\": 0.5}, {\"line_width\": \"4\", \"metrics\": [{\"type\": \"count\", \"id\": \"ae5610d1-8ba9-11e8-ae15-bdcba81344e6\"}], \"color\": \"rgba(244,78,59,1)\", \"stacked\": \"none\", \"label\": \"nak\", \"filter\": \"dhcpv4.option.message_type:nak\", \"seperate_axis\": 0, \"split_mode\": \"everything\", \"chart_type\": \"line\", \"series_drop_last_bucket\": 0, \"point_size\": \"3\", \"axis_position\": \"right\", \"formatter\": \"number\", \"id\": \"ae5610d0-8ba9-11e8-ae15-bdcba81344e6\", \"fill\": 0.5}, {\"line_width\": \"4\", \"metrics\": [{\"type\": \"count\", \"id\": \"cf7ba181-8ba9-11e8-ae15-bdcba81344e6\"}], \"color\": \"rgba(244,78,59,1)\", \"stacked\": \"none\", \"label\": \"decline\", \"filter\": \"dhcpv4.option.message_type:decline\", \"seperate_axis\": 0, \"split_mode\": \"everything\", \"chart_type\": \"line\", \"series_drop_last_bucket\": 0, \"point_size\": \"3\", \"axis_position\": \"right\", \"formatter\": \"number\", \"id\": \"cf7ba180-8ba9-11e8-ae15-bdcba81344e6\", \"fill\": 0.5}], \"axis_formatter\": \"number\", \"interval\": \"auto\", \"ignore_global_filter\": 0, \"filter\": \"type:dhcpv4\", \"show_legend\": 1, \"show_grid\": 1, \"axis_position\": \"left\", \"type\": \"timeseries\", \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"drop_last_bucket\": 1}, \"aggs\": [], \"title\": \"Message Types over Time [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "8460fcd0-8baa-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"dhcpv4.option.message_type:nak OR dhcpv4.option.message_type:decline\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+                "title": "NAK and Decline Count [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 57, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"addLegend\": false}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}], \"title\": \"NAK and Decline Count [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "4ad9db20-8bab-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+                "title": "Message Types [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": true, \"addTooltip\": true, \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"type\": \"pie\"}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Op Code\", \"missingBucketLabel\": \"Missing\", \"field\": \"dhcpv4.op_code\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Message Type\", \"missingBucketLabel\": \"Missing\", \"field\": \"dhcpv4.option.message_type\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Message Types [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "418dfbe0-8bac-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "dhcpv4.transaction_id", 
+                    "dhcpv4.op_code", 
+                    "dhcpv4.option.message_type", 
+                    "source.ip", 
+                    "destination.ip", 
+                    "dhcpv4.client_mac", 
+                    "dhcpv4.option.hostname", 
+                    "dhcpv4.option.class_identifier"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"event.dataset\": {\"query\": \"dhcpv4\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"dhcpv4\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"dhcpv4\", \"type\": \"phrase\"}, \"key\": \"event.dataset\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"index\": \"packetbeat-*\", \"version\": true, \"highlightAll\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "DHCPv4 [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+                "title": "Transaction Count [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 60, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"addLegend\": false}, \"aggs\": [{\"params\": {\"field\": \"dhcpv4.transaction_id\", \"customLabel\": \"Unique Transactions\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}], \"title\": \"Transaction Count [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "d0120dc0-8bac-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+                "title": "Client Count [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 60, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"addLegend\": false}, \"aggs\": [{\"params\": {\"field\": \"dhcpv4.client_mac\", \"customLabel\": \"Unique MACs\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}], \"title\": \"Client Count [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "11d33ea0-8bad-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                }, 
+                "savedSearchId": "b8992150-8ba8-11e8-9676-ef67484126fb-ecs", 
+                "title": "Data Transfer [Packetbeat DHCPv4] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 24, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addTooltip\": true, \"addLegend\": false}, \"aggs\": [{\"params\": {\"field\": \"client.bytes\", \"customLabel\": \"Requests\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"server.bytes\", \"customLabel\": \"Responses\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"2\", \"schema\": \"metric\"}], \"title\": \"Data Transfer [Packetbeat DHCPv4] ECS\"}"
+            }, 
+            "id": "f43a8f20-8bb5-11e8-9676-ef67484126fb-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "DHCPv4 Overview", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"useMargins\": true, \"darkTheme\": false, \"hidePanelTitles\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 9, \"y\": 7, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"1\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"8460fcd0-8baa-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 7, \"y\": 0, \"w\": 8, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"2\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"4ad9db20-8bab-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"3\", \"h\": 7, \"y\": 0, \"w\": 11, \"x\": 37}, \"embeddableConfig\": {}, \"panelIndex\": \"3\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"418dfbe0-8bac-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 14, \"y\": 16, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"5\", \"version\": \"6.3.0\", \"type\": \"search\", \"id\": \"b8992150-8ba8-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"6\", \"h\": 7, \"y\": 0, \"w\": 8, \"x\": 8}, \"embeddableConfig\": {}, \"panelIndex\": \"6\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"d0120dc0-8bac-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"7\", \"h\": 7, \"y\": 0, \"w\": 8, \"x\": 16}, \"embeddableConfig\": {}, \"panelIndex\": \"7\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"11d33ea0-8bad-11e8-9676-ef67484126fb-ecs\"}, {\"gridData\": {\"i\": \"8\", \"h\": 7, \"y\": 0, \"w\": 13, \"x\": 24}, \"embeddableConfig\": {}, \"panelIndex\": \"8\", \"version\": \"6.3.0\", \"type\": \"visualization\", \"id\": \"f43a8f20-8bb5-11e8-9676-ef67484126fb-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] DHCPv4 ECS", 
+                "version": 1
+            }, 
+            "id": "a7b35890-8baa-11e8-9676-ef67484126fb-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:22.006Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

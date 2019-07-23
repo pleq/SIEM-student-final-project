@@ -1,0 +1,189 @@
+2019-06-07 00:10:57,467 - [INFO] - from play.api.Play in main 
+Application started (Prod) (no global state)
+
+2019-06-07 00:10:59,006 - [INFO] - from play.core.server.AkkaHttpServer in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2019-06-07 00:11:52,687 - [ERROR] - from application in application-akka.actor.default-dispatcher-12 
+
+
+! @7c59ghoo9 - Internal server error, for (POST) [/connect] ->
+ 
+play.api.UnexpectedException: Unexpected exception[IllegalArgumentException: Invalid URL localhost:9200/_cluster/health]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:319)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:243)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:382)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:380)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Invalid URL localhost:9200/_cluster/health
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:85)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.url(StandaloneAhcWSClient.scala:43)
+	at play.api.libs.ws.ahc.AhcWSClient.url(AhcWSClient.scala:36)
+	at elastic.HTTPElasticClient.execute(HTTPElasticClient.scala:325)
+	at elastic.HTTPElasticClient.executeRequest(HTTPElasticClient.scala:314)
+	at controllers.ConnectController.$anonfun$connect$1(ConnectController.scala:23)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:29)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:12)
+	at play.api.mvc.ActionBuilder$$anon$10.apply(Action.scala:420)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:97)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:175)
+	at scala.util.Try$.apply(Try.scala:213)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:175)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:212)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:377)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	... 12 common frames omitted
+Caused by: java.lang.IllegalArgumentException: localhost:9200/_cluster/health could not be parsed into a proper Uri, missing host
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:73)
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:62)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:82)
+	... 30 common frames omitted
+
+2019-06-07 00:12:14,143 - [ERROR] - from application in application-akka.actor.default-dispatcher-8 
+
+
+! @7c59gj4i3 - Internal server error, for (POST) [/connect] ->
+ 
+play.api.UnexpectedException: Unexpected exception[IllegalArgumentException: Invalid URL localhost:9200/_cluster/health]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:319)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:243)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:382)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:380)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Invalid URL localhost:9200/_cluster/health
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:85)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.url(StandaloneAhcWSClient.scala:43)
+	at play.api.libs.ws.ahc.AhcWSClient.url(AhcWSClient.scala:36)
+	at elastic.HTTPElasticClient.execute(HTTPElasticClient.scala:325)
+	at elastic.HTTPElasticClient.executeRequest(HTTPElasticClient.scala:314)
+	at controllers.ConnectController.$anonfun$connect$1(ConnectController.scala:23)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:29)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:12)
+	at play.api.mvc.ActionBuilder$$anon$10.apply(Action.scala:420)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:97)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:175)
+	at scala.util.Try$.apply(Try.scala:213)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:175)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:212)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:377)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	... 12 common frames omitted
+Caused by: java.lang.IllegalArgumentException: localhost:9200/_cluster/health could not be parsed into a proper Uri, missing host
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:73)
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:62)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:82)
+	... 30 common frames omitted
+
+2019-06-07 00:13:40,421 - [INFO] - from play.core.server.AkkaHttpServer in Thread-0 
+Stopping server...
+
+2019-06-07 01:52:25,914 - [INFO] - from play.api.Play in main 
+Application started (Prod) (no global state)
+
+2019-06-07 01:52:31,252 - [INFO] - from play.core.server.AkkaHttpServer in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2019-06-07 01:52:46,638 - [ERROR] - from application in application-akka.actor.default-dispatcher-5 
+
+
+! @7c5a3oac9 - Internal server error, for (POST) [/connect] ->
+ 
+play.api.UnexpectedException: Unexpected exception[IllegalArgumentException: Invalid URL localhost:9200/_cluster/health]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:319)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:243)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:382)
+	at play.core.server.AkkaHttpServer$$anonfun$1.applyOrElse(AkkaHttpServer.scala:380)
+	at scala.concurrent.Future.$anonfun$recoverWith$1(Future.scala:417)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:91)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:91)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:44)
+	at akka.dispatch.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)
+	at akka.dispatch.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)
+	at akka.dispatch.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)
+	at akka.dispatch.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)
+Caused by: java.lang.IllegalArgumentException: Invalid URL localhost:9200/_cluster/health
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:85)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.url(StandaloneAhcWSClient.scala:43)
+	at play.api.libs.ws.ahc.AhcWSClient.url(AhcWSClient.scala:36)
+	at elastic.HTTPElasticClient.execute(HTTPElasticClient.scala:325)
+	at elastic.HTTPElasticClient.executeRequest(HTTPElasticClient.scala:314)
+	at controllers.ConnectController.$anonfun$connect$1(ConnectController.scala:23)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:29)
+	at controllers.auth.AuthAction.invokeBlock(AuthAction.scala:12)
+	at play.api.mvc.ActionBuilder$$anon$10.apply(Action.scala:420)
+	at play.api.mvc.Action.$anonfun$apply$2(Action.scala:97)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:175)
+	at scala.util.Try$.apply(Try.scala:213)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:175)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:57)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:212)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:377)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	... 12 common frames omitted
+Caused by: java.lang.IllegalArgumentException: localhost:9200/_cluster/health could not be parsed into a proper Uri, missing host
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:73)
+	at play.shaded.ahc.org.asynchttpclient.uri.Uri.create(Uri.java:62)
+	at play.api.libs.ws.ahc.StandaloneAhcWSClient.validate(StandaloneAhcWSClient.scala:82)
+	... 30 common frames omitted
+
+2019-06-07 02:19:22,441 - [INFO] - from play.core.server.AkkaHttpServer in Thread-0 
+Stopping server...
+
+2019-06-08 23:22:17,209 - [INFO] - from play.api.Play in main 
+Application started (Prod) (no global state)
+
+2019-06-08 23:22:22,358 - [INFO] - from play.core.server.AkkaHttpServer in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2019-06-08 23:29:57,637 - [INFO] - from play.core.server.AkkaHttpServer in Thread-0 
+Stopping server...
+
+2019-06-08 23:32:18,624 - [INFO] - from play.api.Play in main 
+Application started (Prod) (no global state)
+
+2019-06-08 23:32:19,656 - [INFO] - from play.core.server.AkkaHttpServer in main 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2019-06-09 01:29:17,680 - [INFO] - from play.core.server.AkkaHttpServer in Thread-0 
+Stopping server...
+

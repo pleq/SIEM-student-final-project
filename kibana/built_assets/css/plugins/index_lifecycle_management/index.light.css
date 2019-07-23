@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+.policyTable__horizontalScrollContainer {
+  overflow-x: auto;
+  max-width: 100%; }
+
+.policyTable__horizontalScroll {
+  min-width: 800px;
+  width: 100%; }
+
+.ilmEditPolicyPageContent {
+  max-width: 1200px !important; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL2luZGV4X2xpZmVjeWNsZV9tYW5hZ2VtZW50L3B1YmxpYy9faW5kZXhfbGlmZWN5Y2xlX21hbmFnZW1lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFZQTtFQUNFLHFCQUFvQjtFQUNwQixxQkFBb0I7RUFDcEIsbUJBQWtCLEVBQ25COztBQ2hCRDtFQUNFLGlCQUFnQjtFQUNoQixnQkFBZSxFQUNoQjs7QUFDRDtFQUNFLGlCQUFnQjtFQUNoQixZQUFXLEVBQ1o7O0FBQ0Q7RUFDRSw2QkFBNEIsRUFDN0IiLCJmaWxlIjoiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9pbmRleF9saWZlY3ljbGVfbWFuYWdlbWVudC9wdWJsaWMvaW5kZXguc2NzcyJ9 */

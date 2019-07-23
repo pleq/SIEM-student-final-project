@@ -1,0 +1,23 @@
+name: Siem rule
+type: frequency
+index: logstash-*
+use_local_time: false
+num_events: 3
+timeframe:
+  minutes: 1
+filter:
+#- query:
+#    wildcard:
+#      field: "*logged=1*"
+- query:
+    query_string:
+      query: "response: 200 AND NOT request: logged AND NOT message: logged"
+alert:
+- email
+email: 
+  - "emir.mongush@gmail.com"
+smtp_host: "smtp.gmail.com"
+smtp_port: 465
+smtp_ssl: true
+from_addr: "fifi.gather@gmail.com"
+smtp_auth_file: "c://SIEM/elastalert/email/email.yaml"

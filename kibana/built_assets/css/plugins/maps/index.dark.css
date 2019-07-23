@@ -1,0 +1,267 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+/* GIS plugin styles */
+#maps-plugin {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 48px);
+  width: 100%;
+  overflow: hidden; }
+
+.mapFullScreen {
+  height: 100vh !important; }
+
+#react-maps-root {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.mapContainer {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.mapboxgl-popup {
+  z-index: 100;
+  border-color: #1D1E24; }
+
+.mapboxgl-popup-content {
+  background-color: #1D1E24; }
+
+.mapboxgl-popup-tip {
+  border-top-color: #1D1E24 !important; }
+
+.euiColorPicker__emptySwatch {
+  position: relative; }
+
+.mapMapWrapper {
+  background-color: #1D1E24;
+  position: relative; }
+
+.mapMapLayerPanel {
+  background-color: #1a1b20;
+  width: 0;
+  overflow: hidden; }
+  .mapMapLayerPanel > * {
+    width: 440px; }
+  .mapMapLayerPanel-isVisible {
+    width: 440px;
+    -webkit-transition: width 250ms cubic-bezier(0.694, 0.0482, 0.335, 1);
+    transition: width 250ms cubic-bezier(0.694, 0.0482, 0.335, 1); }
+
+.mapLayerAddpanel__card .euiCard__content {
+  padding-top: 0 !important; }
+
+.mapLayerAddpanel__card .euiCard__top + .euiCard__content {
+  padding-top: 2px !important; }
+
+/**
+ * 1. Firefox and IE don't respect bottom padding of overflow scrolling flex items.
+ *    So we instead strip out the bottom padding and add the same amount as a margin
+ *    to the last child element.
+ */
+.mapLayerPanel__header,
+.mapLayerPanel__body,
+.mapLayerPanel__footer {
+  padding: 16px; }
+
+.mapLayerPanel__body {
+  -webkit-flex-basis: 1px;
+      -ms-flex-preferred-size: 1px;
+          flex-basis: 1px;
+  /* Fixes scrolling for Firefox */
+  padding-bottom: 0;
+  /* 1 */ }
+  .mapLayerPanel__body > *:last-child {
+    margin-bottom: 16px;
+    /* 1 */ }
+
+.mapLayerPanel__header {
+  -webkit-box-shadow: 0 16px 16px -8px #1D1E24;
+          box-shadow: 0 16px 16px -8px #1D1E24;
+  z-index: 2; }
+
+.mapLayerPanel__sourceDetails {
+  margin-left: 32px; }
+
+.mapLayerPanel__sourceDetail {
+  margin-bottom: 0px !important; }
+
+.mapLayerPanel__footer {
+  -webkit-box-shadow: 0 -16px 16px -8px #1D1E24;
+          box-shadow: 0 -16px 16px -8px #1D1E24;
+  z-index: 2;
+  border-top: 1px solid #343741; }
+
+.mapJoinItem {
+  position: relative;
+  background: #343741;
+  border-radius: 4px;
+  padding: 4px; }
+  .mapJoinItem .mapJoinItem__inner {
+    scrollbar-width: thin;
+    overflow-x: auto; }
+    .mapJoinItem .mapJoinItem__inner::-webkit-scrollbar {
+      width: 16px;
+      height: 16px; }
+    .mapJoinItem .mapJoinItem__inner::-webkit-scrollbar-thumb {
+      background-color: rgba(212, 218, 229, 0.5);
+      border: 6px solid transparent;
+      background-clip: content-box; }
+    .mapJoinItem .mapJoinItem__inner::-webkit-scrollbar-corner, .mapJoinItem .mapJoinItem__inner::-webkit-scrollbar-track {
+      background-color: transparent; }
+  .mapJoinItem:hover .mapJoinItem__delete, .mapJoinItem:focus .mapJoinItem__delete {
+    visibility: visible;
+    opacity: 1; }
+
+.mapJoinItem__delete {
+  -webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3), 0 1px 5px -2px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3), 0 1px 5px -2px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-right: -8px;
+  margin-top: -12px;
+  background: #1D1E24;
+  padding: 4px;
+  visibility: hidden;
+  opacity: 0; }
+
+.mapAlphaRange .euiFieldNumber {
+  max-width: 5.5em !important; }
+
+/**
+ * 1. The overlay captures mouse events even if it's empty space. To counter-act this,
+ *    we remove all pointer events from the overlay then add them back on the
+ *    individual widgets.
+ */
+.mapWidgetOverlay {
+  position: absolute;
+  z-index: 1000;
+  top: 12px;
+  right: 12px;
+  bottom: 12px;
+  pointer-events: none;
+  /* 1 */ }
+
+.mapWidgetOverlay__rightSide {
+  min-width: 19rem;
+  max-width: 24rem; }
+
+.mapWidgetControl {
+  max-height: 100%;
+  overflow: hidden;
+  padding-bottom: 8px;
+  border-color: transparent !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  pointer-events: all;
+  /* 1 */ }
+  .mapWidgetControl.mapWidgetControl-hasShadow {
+    -webkit-box-shadow: 0 40px 64px 0 rgba(0, 0, 0, 0.1), 0 24px 32px 0 rgba(0, 0, 0, 0.1), 0 16px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 40px 64px 0 rgba(0, 0, 0, 0.1), 0 24px 32px 0 rgba(0, 0, 0, 0.1), 0 16px 16px 0 rgba(0, 0, 0, 0.1), 0 8px 8px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 2px 2px 0 rgba(0, 0, 0, 0.1); }
+  .mapWidgetControl .mapWidgetControl__header {
+    padding: 8px 16px;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+
+.mapAttributionControl {
+  padding: 0 4px; }
+
+.mapLayerControl {
+  scrollbar-width: thin;
+  overflow-y: auto;
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important; }
+  .mapLayerControl::-webkit-scrollbar {
+    width: 16px;
+    height: 16px; }
+  .mapLayerControl::-webkit-scrollbar-thumb {
+    background-color: rgba(212, 218, 229, 0.5);
+    border: 6px solid transparent;
+    background-clip: content-box; }
+  .mapLayerControl::-webkit-scrollbar-corner, .mapLayerControl::-webkit-scrollbar-track {
+    background-color: transparent; }
+
+.mapTocEntry {
+  padding: 8px 16px;
+  position: relative; }
+
+.mapTocEntry-visible {
+  opacity: 1; }
+
+.mapTocEntry-notVisible {
+  opacity: 0.5; }
+
+.mapTocEntry__grab {
+  margin-left: 4px; }
+
+.mapTocEntry__grab:hover {
+  cursor: -webkit-grab;
+  cursor: grab; }
+
+/**
+ * 1. The overlay captures mouse events even if it's empty space. To counter-act this,
+ *    we remove all pointer events from the overlay then add them back on the
+ *    individual widgets.
+ */
+.mapViewControl__coordinates {
+  padding: 4px 8px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none; }
+
+.mapViewControl__gotoButton {
+  min-width: 0;
+  pointer-events: all;
+  /* 1 */ }
+
+.mapColorGradient {
+  width: 100%;
+  height: 4px;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.mapStaticDynamicSylingOption__dynamicSizeHack {
+  width: calc(100% - 48px); }
+
+.mapColorPicker {
+  padding-top: 9px; }
+  .mapColorPicker .euiColorPickerPopUp {
+    z-index: 3000; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL21hcHMvcHVibGljL2luZGV4LnNjc3MiLCJidWlsZC9raWJhbmEvbm9kZV9tb2R1bGVzL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9tYXBzL3B1YmxpYy9fbWFpbi5zY3NzIiwiYnVpbGQvbm9kZV9tb2R1bGVzL0BlbGFzdGljL2V1aS9zcmMvdGhlbWVzL2V1aS9ldWlfY29sb3JzX2Rhcmsuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL21hcHMvcHVibGljL2NvbXBvbmVudHMvZ2lzX21hcC9fZ2lzX21hcC5zY3NzIiwiYnVpbGQvbm9kZV9tb2R1bGVzL0BlbGFzdGljL2V1aS9zcmMvZ2xvYmFsX3N0eWxpbmcvZnVuY3Rpb25zL19jb2xvcnMuc2NzcyIsImJ1aWxkL25vZGVfbW9kdWxlcy9AZWxhc3RpYy9ldWkvc3JjL2dsb2JhbF9zdHlsaW5nL3ZhcmlhYmxlcy9fYW5pbWF0aW9ucy5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvY29tcG9uZW50cy9sYXllcl9hZGRwYW5lbC9fbGF5ZXJfYWRkcGFuZWwuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL21hcHMvcHVibGljL2NvbXBvbmVudHMvbGF5ZXJfcGFuZWwvX2xheWVyX3BhbmVsLnNjc3MiLCJidWlsZC9ub2RlX21vZHVsZXMvQGVsYXN0aWMvZXVpL3NyYy9nbG9iYWxfc3R5bGluZy92YXJpYWJsZXMvX3NpemUuc2NzcyIsImJ1aWxkL25vZGVfbW9kdWxlcy9AZWxhc3RpYy9ldWkvc3JjL2dsb2JhbF9zdHlsaW5nL21peGlucy9fc2hhZG93LnNjc3MiLCJidWlsZC9raWJhbmEvbm9kZV9tb2R1bGVzL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9tYXBzL3B1YmxpYy9jb21wb25lbnRzL2xheWVyX3BhbmVsL2pvaW5fZWRpdG9yL3Jlc291cmNlcy9fam9pbi5zY3NzIiwiYnVpbGQvbm9kZV9tb2R1bGVzL0BlbGFzdGljL2V1aS9zcmMvZ2xvYmFsX3N0eWxpbmcvdmFyaWFibGVzL19ib3JkZXJzLnNjc3MiLCJidWlsZC9ub2RlX21vZHVsZXMvQGVsYXN0aWMvZXVpL3NyYy9nbG9iYWxfc3R5bGluZy9taXhpbnMvX2hlbHBlcnMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL21hcHMvcHVibGljL2NvbXBvbmVudHMvbGF5ZXJfcGFuZWwvc2V0dGluZ3NfcGFuZWwvX3NldHRpbmdzX3BhbmVsLnNjc3MiLCJidWlsZC9raWJhbmEvbm9kZV9tb2R1bGVzL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9tYXBzL3B1YmxpYy9jb21wb25lbnRzL3dpZGdldF9vdmVybGF5L193aWRnZXRfb3ZlcmxheS5zY3NzIiwiYnVpbGQvbm9kZV9tb2R1bGVzL0BlbGFzdGljL2V1aS9zcmMvZ2xvYmFsX3N0eWxpbmcvdmFyaWFibGVzL196X2luZGV4LnNjc3MiLCJidWlsZC9raWJhbmEvbm9kZV9tb2R1bGVzL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9tYXBzL3B1YmxpYy9jb21wb25lbnRzL3dpZGdldF9vdmVybGF5L2F0dHJpYnV0aW9uX2NvbnRyb2wvX2F0dHJpYnV0aW9uX2NvbnRyb2wuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL21hcHMvcHVibGljL2NvbXBvbmVudHMvd2lkZ2V0X292ZXJsYXkvbGF5ZXJfY29udHJvbC9fbGF5ZXJfY29udHJvbC5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvY29tcG9uZW50cy93aWRnZXRfb3ZlcmxheS9sYXllcl9jb250cm9sL2xheWVyX3RvYy90b2NfZW50cnkvX3RvY19lbnRyeS5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvY29tcG9uZW50cy93aWRnZXRfb3ZlcmxheS92aWV3X2NvbnRyb2wvX3ZpZXdfY29udHJvbC5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvc2hhcmVkL2ljb25zL19jb2xvcl9ncmFkaWVudC5zY3NzIiwiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvc2hhcmVkL2xheWVycy9zdHlsZXMvY29tcG9uZW50cy9fc3RhdGljX2R5bmFtaWNfc3R5bGVfcm93LnNjc3MiLCJidWlsZC9raWJhbmEvbm9kZV9tb2R1bGVzL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9tYXBzL3B1YmxpYy9zaGFyZWQvbGF5ZXJzL3N0eWxlcy9jb21wb25lbnRzL3ZlY3Rvci9jb2xvci9fc3RhdGljX2NvbG9yX3NlbGVjdGlvbi5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQVlBO0VBQ0UscUJBQW9CO0VBQ3BCLHFCQUFvQjtFQUNwQixtQkFBa0IsRUFDbkI7O0FDYkQsdUJBQXVCO0FDRHZCO0VBQ0UscUJBQWE7RUFBYixzQkFBYTtFQUFiLHFCQUFhO0VBQWIsY0FBYTtFQUNiLDZCQUFzQjtFQUF0Qiw4QkFBc0I7RUFBdEIsK0JBQXNCO01BQXRCLDJCQUFzQjtVQUF0Qix1QkFBc0I7RUFDdEIsMkJBQTRDO0VBQzVDLFlBQVc7RUFDWCxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSx5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O1VBQTNCLDRCQUEyQixFQUM1QjtFTG1DQztJQUNFLFlBQVc7SUFDWCxhQUFZLEVBQ2I7RUFFRDtJQUNFLDJDQUF3RDtJQUN4RCw4QkFBNkI7SUFDN0IsNkJBQTRCLEVBQzdCO0VBRUQ7SUFFRSw4QkFBNkIsRUFDOUI7O0FNckRIO0VBQ0Usa0JWRGdCO0VVRWhCLG1CQUFrQixFQUNuQjs7QUFFRDtFQUNFLFdBQVUsRUFDWDs7QUFFRDtFQUNFLGFBQVksRUFDYjs7QUFFRDtFQUNFLGlCVlowQixFVWEzQjs7QUFFRDtFQUNFLHFCQUFZO0VBQVosYUFBWSxFQUNiOztBQ25CRDs7OztHQUlHO0FBRUg7RUFDRSxpQlhKeUI7RVdLekIseUJBQXVCO0VBQXZCLGdDQUF1QjtNQUF2QixzQkFBdUI7VUFBdkIsd0JBQXVCO0VBQ3ZCLHFCQUFvQixFQUNyQjs7QUFFRDtFQUNFLGFBQVk7RUFDWixvQkFBbUI7RUFBRSxPQUFPLEVBQzdCOztBQ2ZEO0VBQ0UsWUFBVztFQUNYLFlaQTBCO0VZQzFCLG1CQUFrQjtFQUNsQixPQUFNO0VBQ04sU0FBUTtFQUNSLFVBQVM7RUFDVCxRQUFPLEVBQ1I7O0FDUkQ7RUFDRSx5QkFBOEMsRUFDL0M7O0FDRkQ7RUFDRSxpQkFBZ0IsRUFLakI7RUFORDtJQUlJLGNQY3NCLEVPYnZCIiwiZmlsZSI6ImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMveC1wYWNrL3BsdWdpbnMvbWFwcy9wdWJsaWMvaW5kZXguc2NzcyJ9 */

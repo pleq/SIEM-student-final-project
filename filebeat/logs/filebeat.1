@@ -1,0 +1,63 @@
+2019-06-16T15:38:15.447+1000	INFO	instance/beat.go:571	Home path: [c:\SIEM\filebeat] Config path: [c:\SIEM\filebeat] Data path: [c:\SIEM\filebeat\data] Logs path: [c:\SIEM\filebeat\logs]
+2019-06-16T15:38:15.532+1000	INFO	instance/beat.go:579	Beat ID: 98b27daa-a842-4e98-a04b-4692de1f71ac
+2019-06-16T15:38:15.532+1000	INFO	[index-management.ilm]	ilm/ilm.go:129	Policy name: filebeat-7.1.0
+2019-06-16T15:38:15.660+1000	INFO	[beat]	instance/beat.go:827	Beat info	{"system_info": {"beat": {"path": {"config": "c:\\SIEM\\filebeat", "data": "c:\\SIEM\\filebeat\\data", "home": "c:\\SIEM\\filebeat", "logs": "c:\\SIEM\\filebeat\\logs"}, "type": "filebeat", "uuid": "98b27daa-a842-4e98-a04b-4692de1f71ac"}}}
+2019-06-16T15:38:15.660+1000	INFO	[beat]	instance/beat.go:836	Build info	{"system_info": {"build": {"commit": "03b3db2a1d9d76fdf10475e829fce436c61901e4", "libbeat": "7.1.0", "time": "2019-05-15T23:59:18.000Z", "version": "7.1.0"}}}
+2019-06-16T15:38:15.660+1000	INFO	[beat]	instance/beat.go:839	Go runtime info	{"system_info": {"go": {"os":"windows","arch":"amd64","max_procs":4,"version":"go1.11.5"}}}
+2019-06-16T15:38:15.751+1000	INFO	[beat]	instance/beat.go:843	Host info	{"system_info": {"host": {"architecture":"x86_64","boot_time":"2019-06-13T22:01:42.17+10:00","name":"Alice","ip":["fe80::c400:c736:9cbc:7587/64","169.254.117.135/16","fe80::ec79:8eec:3cbf:f5c/64","192.168.56.1/24","fe80::4034:257d:bfe7:9ab1/64","169.254.154.177/16","fe80::8994:3aeb:2fcd:7b4f/64","169.254.123.79/16","fe80::74e5:f223:9a50:246b/64","169.254.36.107/16","fe80::48c6:f4e4:b1d8:93c9/64","192.168.1.220/24","fe80::7891:3e03:cef2:51e4/64","192.168.74.1/24","fe80::4d7e:d807:607f:beea/64","192.168.164.1/24","::1/128","127.0.0.1/8"],"kernel_version":"10.0.17134.829 (WinBuild.160101.0800)","mac":["00:ff:93:b8:a8:99","0a:00:27:00:00:15","68:94:23:58:ef:bd","1a:94:23:58:ef:bd","2a:94:23:58:ef:bd","b8:88:e3:a3:b4:a7","00:50:56:c0:00:01","00:50:56:c0:00:08"],"os":{"family":"windows","platform":"windows","name":"Windows 10 Home Single Language","version":"10.0","major":10,"minor":0,"patch":0,"build":"17134.829"},"timezone":"+10","timezone_offset_sec":36000,"id":"272c115f-f267-412d-86d3-a5397ce1ca73"}}}
+2019-06-16T15:38:15.754+1000	INFO	[beat]	instance/beat.go:872	Process info	{"system_info": {"process": {"cwd": "c:\\SIEM\\filebeat", "exe": "C:\\SIEM\\filebeat\\filebeat.exe", "name": "filebeat.exe", "pid": 12732, "ppid": 13568, "start_time": "2019-06-16T15:38:15.299+1000"}}}
+2019-06-16T15:38:15.754+1000	INFO	instance/beat.go:280	Setup Beat: filebeat; Version: 7.1.0
+2019-06-16T15:38:15.755+1000	INFO	[index-management]	idxmgmt/std.go:165	Set output.elasticsearch.index to 'filebeat-7.1.0' as ILM is enabled.
+2019-06-16T15:38:15.755+1000	INFO	elasticsearch/client.go:165	Elasticsearch url: http://localhost:9200
+2019-06-16T15:38:15.755+1000	INFO	[publisher]	pipeline/module.go:97	Beat name: Alice
+2019-06-16T15:38:15.759+1000	INFO	instance/beat.go:391	filebeat start running.
+2019-06-16T15:38:15.759+1000	INFO	[monitoring]	log/log.go:117	Starting metrics logging every 30s
+2019-06-16T15:38:15.763+1000	INFO	registrar/registrar.go:145	Loading registrar data from c:\SIEM\filebeat\data\registry\filebeat\data.json
+2019-06-16T15:38:15.763+1000	INFO	registrar/registrar.go:152	States Loaded from registrar: 2
+2019-06-16T15:38:15.764+1000	INFO	crawler/crawler.go:72	Loading Inputs: 1
+2019-06-16T15:38:15.825+1000	INFO	log/input.go:138	Configured paths: [c:\xampp\apache\logs\error.log*]
+2019-06-16T15:38:15.825+1000	INFO	log/input.go:138	Configured paths: [c:\xampp\apache\logs\access.log*]
+2019-06-16T15:38:15.825+1000	INFO	crawler/crawler.go:106	Loading and starting Inputs completed. Enabled inputs: 0
+2019-06-16T15:38:15.825+1000	INFO	cfgfile/reload.go:150	Config reloader started
+2019-06-16T15:38:15.916+1000	INFO	log/input.go:138	Configured paths: [c:\xampp\apache\logs\access.log*]
+2019-06-16T15:38:15.917+1000	INFO	log/input.go:138	Configured paths: [c:\xampp\apache\logs\error.log*]
+2019-06-16T15:38:15.917+1000	INFO	elasticsearch/client.go:165	Elasticsearch url: http://localhost:9200
+2019-06-16T15:38:15.922+1000	INFO	elasticsearch/client.go:734	Attempting to connect to Elasticsearch version 7.1.1
+2019-06-16T15:38:17.105+1000	INFO	fileset/pipelines.go:134	Elasticsearch pipeline with ID 'filebeat-7.1.0-apache-access-default' loaded
+2019-06-16T15:38:17.311+1000	INFO	fileset/pipelines.go:134	Elasticsearch pipeline with ID 'filebeat-7.1.0-apache-error-pipeline' loaded
+2019-06-16T15:38:17.311+1000	INFO	input/input.go:114	Starting input of type: log; ID: 9194900082968254563 
+2019-06-16T15:38:17.311+1000	INFO	input/input.go:114	Starting input of type: log; ID: 13459754404663422590 
+2019-06-16T15:38:17.311+1000	INFO	cfgfile/reload.go:205	Loading of config files completed.
+2019-06-16T15:38:17.312+1000	INFO	log/harvester.go:254	Harvester started for file: c:\xampp\apache\logs\error.log
+2019-06-16T15:38:18.660+1000	INFO	add_cloud_metadata/add_cloud_metadata.go:346	add_cloud_metadata: hosting provider type not detected.
+2019-06-16T15:38:19.661+1000	INFO	pipeline/output.go:95	Connecting to backoff(elasticsearch(http://localhost:9200))
+2019-06-16T15:38:19.682+1000	INFO	elasticsearch/client.go:734	Attempting to connect to Elasticsearch version 7.1.1
+2019-06-16T15:38:19.816+1000	INFO	[index-management]	idxmgmt/std.go:223	Auto ILM enable success.
+2019-06-16T15:38:19.817+1000	INFO	[index-management.ilm]	ilm/std.go:134	do not generate ilm policy: exists=true, overwrite=false
+2019-06-16T15:38:19.829+1000	INFO	[index-management]	idxmgmt/std.go:238	ILM policy successfully loaded.
+2019-06-16T15:38:19.830+1000	INFO	[index-management]	idxmgmt/std.go:361	Set setup.template.name to '{filebeat-7.1.0 {now/d}-000001}' as ILM is enabled.
+2019-06-16T15:38:19.830+1000	INFO	[index-management]	idxmgmt/std.go:366	Set setup.template.pattern to 'filebeat-7.1.0-*' as ILM is enabled.
+2019-06-16T15:38:19.830+1000	INFO	[index-management]	idxmgmt/std.go:400	Set settings.index.lifecycle.rollover_alias in template to {filebeat-7.1.0 {now/d}-000001} as ILM is enabled.
+2019-06-16T15:38:19.830+1000	INFO	[index-management]	idxmgmt/std.go:404	Set settings.index.lifecycle.name in template to {filebeat-7.1.0 map[policy:{"phases":{"hot":{"actions":{"rollover":{"max_age":"30d","max_size":"50gb"}}}}}]} as ILM is enabled.
+2019-06-16T15:38:19.834+1000	INFO	template/load.go:129	Template already exists and will not be overwritten.
+2019-06-16T15:38:19.834+1000	INFO	[index-management]	idxmgmt/std.go:272	Loaded index template.
+2019-06-16T15:38:19.835+1000	INFO	[index-management]	idxmgmt/std.go:283	Write alias successfully generated.
+2019-06-16T15:38:19.855+1000	INFO	pipeline/output.go:105	Connection to backoff(elasticsearch(http://localhost:9200)) established
+2019-06-16T15:38:45.966+1000	INFO	[monitoring]	log/log.go:144	Non-zero metrics in the last 30s	{"monitoring": {"metrics": {"beat":{"cpu":{"system":{"ticks":468,"time":{"ms":484}},"total":{"ticks":671,"time":{"ms":687},"value":671},"user":{"ticks":203,"time":{"ms":203}}},"handles":{"open":259},"info":{"ephemeral_id":"51ae779d-065c-49cf-84a1-9dc30eaf0e74","uptime":{"ms":30642}},"memstats":{"gc_next":5510720,"memory_alloc":3609816,"memory_total":10698744,"rss":25387008}},"filebeat":{"events":{"added":166,"done":166},"harvester":{"open_files":1,"running":1,"started":1}},"libbeat":{"config":{"module":{"running":0},"reloads":1},"output":{"events":{"acked":163,"batches":4,"total":163},"read":{"bytes":6232},"type":"elasticsearch","write":{"bytes":159082}},"pipeline":{"clients":4,"events":{"active":0,"filtered":3,"published":163,"retry":50,"total":166},"queue":{"acked":163}}},"registrar":{"states":{"current":3,"update":166},"writes":{"success":6,"total":6}},"system":{"cpu":{"cores":4}}}}}
+2019-06-16T15:39:09.467+1000	INFO	beater/filebeat.go:432	Stopping filebeat
+2019-06-16T15:39:09.468+1000	INFO	crawler/crawler.go:139	Stopping Crawler
+2019-06-16T15:39:09.495+1000	INFO	crawler/crawler.go:149	Stopping 0 inputs
+2019-06-16T15:39:09.495+1000	INFO	cfgfile/reload.go:208	Dynamic config reloader stopped
+2019-06-16T15:39:09.495+1000	INFO	[reload]	cfgfile/list.go:118	Stopping 1 runners ...
+2019-06-16T15:39:09.495+1000	INFO	input/input.go:149	input ticker stopped
+2019-06-16T15:39:09.495+1000	INFO	input/input.go:167	Stopping Input: 9194900082968254563
+2019-06-16T15:39:09.495+1000	INFO	input/input.go:149	input ticker stopped
+2019-06-16T15:39:09.495+1000	INFO	input/input.go:167	Stopping Input: 13459754404663422590
+2019-06-16T15:39:09.495+1000	INFO	log/harvester.go:275	Reader was closed: c:\xampp\apache\logs\error.log. Closing.
+2019-06-16T15:39:09.495+1000	INFO	crawler/crawler.go:165	Crawler stopped
+2019-06-16T15:39:09.495+1000	INFO	registrar/registrar.go:367	Stopping Registrar
+2019-06-16T15:39:09.495+1000	INFO	registrar/registrar.go:293	Ending Registrar
+2019-06-16T15:39:09.680+1000	INFO	[monitoring]	log/log.go:152	Total non-zero metrics	{"monitoring": {"metrics": {"beat":{"cpu":{"system":{"ticks":484,"time":{"ms":515}},"total":{"ticks":718,"time":{"ms":749},"value":718},"user":{"ticks":234,"time":{"ms":234}}},"handles":{"open":260},"info":{"ephemeral_id":"51ae779d-065c-49cf-84a1-9dc30eaf0e74","uptime":{"ms":54227}},"memstats":{"gc_next":5510720,"memory_alloc":3718560,"memory_total":10807488,"rss":27725824}},"filebeat":{"events":{"added":166,"done":166},"harvester":{"closed":1,"open_files":0,"running":0,"started":1}},"libbeat":{"config":{"module":{"running":0},"reloads":1},"output":{"events":{"acked":163,"batches":4,"total":163},"read":{"bytes":6232},"type":"elasticsearch","write":{"bytes":159082}},"pipeline":{"clients":0,"events":{"active":0,"filtered":3,"published":163,"retry":50,"total":166},"queue":{"acked":163}}},"registrar":{"states":{"current":3,"update":166},"writes":{"success":7,"total":7}},"system":{"cpu":{"cores":4}}}}}
+2019-06-16T15:39:09.680+1000	INFO	[monitoring]	log/log.go:153	Uptime: 54.3564391s
+2019-06-16T15:39:09.680+1000	INFO	[monitoring]	log/log.go:130	Stopping metrics logging.
+2019-06-16T15:39:09.680+1000	INFO	instance/beat.go:401	filebeat stopped.

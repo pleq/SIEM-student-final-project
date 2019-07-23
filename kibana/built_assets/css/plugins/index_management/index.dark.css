@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6, p {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit; }
+
+.indTable thead th.indTable__header--name {
+  width: 25%; }
+
+.indTable .indTable__cell--name {
+  word-break: break-all; }
+
+.indTable__link {
+  text-align: left; }
+
+.indTable__link {
+  text-align: left; }
+
+.indDetail__codeBlock {
+  background: transparent; }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImJ1aWxkL3NyYy9sZWdhY3kvdWkvcHVibGljL3N0eWxlcy9fc3R5bGluZ19jb25zdGFudHMuc2NzcyIsImJ1aWxkL2tpYmFuYS9ub2RlX21vZHVsZXMvbm9kZV9tb2R1bGVzL3gtcGFjay9wbHVnaW5zL2luZGV4X21hbmFnZW1lbnQvcHVibGljL19pbmRleF9tYW5hZ2VtZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBWUE7RUFDRSxxQkFBb0I7RUFDcEIscUJBQW9CO0VBQ3BCLG1CQUFrQixFQUNuQjs7QUNoQkQ7RUFHSSxXQUFVLEVBQ1g7O0FBSkg7RUFRSSxzQkFBcUIsRUFDdEI7O0FBR0g7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSxpQkFBZ0IsRUFDakI7O0FBRUQ7RUFDRSx3QkFBdUIsRUFDeEIiLCJmaWxlIjoiYnVpbGQva2liYW5hL25vZGVfbW9kdWxlcy94LXBhY2svcGx1Z2lucy9pbmRleF9tYW5hZ2VtZW50L3B1YmxpYy9pbmRleC5zY3NzIn0= */

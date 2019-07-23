@@ -1,0 +1,28 @@
+# Module: apache
+# Docs: https://www.elastic.co/guide/en/beats/filebeat/7.1/filebeat-module-apache.html
+
+
+- module: apache
+  
+# Access logs
+  access:
+    enabled: true
+    var.paths: ["c://xampp/apache/logs/access.log*"]
+    
+# Set custom paths for the log files. If left empty,
+    
+# Filebeat will choose the paths depending on your OS.
+    
+#var.paths:
+
+  
+# Error logs
+  error:
+    enabled: true
+    var.paths: ["c://xampp/apache/logs/error.log*"]
+    
+# Set custom paths for the log files. If left empty,
+    
+# Filebeat will choose the paths depending on your OS.
+    
+#var.paths:

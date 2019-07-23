@@ -1,0 +1,167 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Query Summary [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"metric\", \"params\": {\"type\": \"metric\", \"metric\": {\"style\": {\"bgFill\": \"#000\", \"bgColor\": false, \"fontSize\": 28, \"subText\": \"\", \"labelColor\": false}, \"colorSchema\": \"Green to Red\", \"invertColors\": false, \"labels\": {\"show\": true}, \"useRanges\": false, \"percentageMode\": false, \"colorsRange\": [{\"to\": 10000, \"from\": 0}], \"metricColorMode\": \"None\"}, \"addLegend\": false, \"fontSize\": \"17\", \"handleNoResults\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Client Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"2\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Server Bytes\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Avg Response Time (ns)\"}, \"type\": \"avg\", \"enabled\": true, \"id\": \"4\", \"schema\": \"metric\"}], \"title\": \"DNS Query Summary [Packetbeat] ECS\"}"
+            }, 
+            "id": "DNS-Query-Summary-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Request Status Over Time [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"OK\": \"#0A50A1\", \"Error\": \"#890F02\"}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"show\": \"true\", \"data\": {\"id\": \"1\", \"label\": \"Count\"}, \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"valueAxis\": \"ValueAxis-1\", \"type\": \"area\"}], \"yAxis\": {}, \"smoothLines\": false, \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"interpolate\": \"linear\", \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"stacked\", \"type\": \"area\", \"defaultYExtents\": false, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": false, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"status\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"group\"}], \"title\": \"DNS Request Status Over Time [Packetbeat] ECS\"}"
+            }, 
+            "id": "DNS-Request-Status-Over-Time-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"*\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Question Types [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": false, \"type\": \"pie\", \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"shareYAxis\": true, \"addTooltip\": true}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"missingBucketLabel\": \"Missing\", \"field\": \"dns.question.type\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"DNS Question Types [Packetbeat] ECS\"}"
+            }, 
+            "id": "DNS-Question-Types-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [{\"query\": {\"match\": {\"status\": {\"query\": \"OK\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"OK\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"OK\", \"type\": \"phrase\"}, \"key\": \"status\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"index\": \"packetbeat-*\"}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Top 10 Questions [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Question\", \"missingBucketLabel\": \"Missing\", \"field\": \"dns.question.name\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 30}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}], \"title\": \"DNS Top 10 Questions [Packetbeat] ECS\"}"
+            }, 
+            "id": "DNS-Top-10-Questions-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"index\": \"packetbeat-*\"}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Response Codes [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Response Code\", \"missingBucketLabel\": \"Missing\", \"field\": \"dns.response_code\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}], \"title\": \"DNS Response Codes [Packetbeat] ECS\"}"
+            }, 
+            "id": "DNS-Response-Codes-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Min/Max/Avg Response Time Histogram [Packetbeat] ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"Avg Response Time (ns)\": \"#629E51\", \"Min Response Time (ns)\": \"#70DBED\", \"Max Response Time (ns)\": \"#E24D42\"}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"area\", \"params\": {\"seriesParams\": [{\"showCircles\": true, \"show\": true, \"type\": \"area\", \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"4\", \"label\": \"Min Response Time (ns)\"}}, {\"showCircles\": true, \"show\": \"true\", \"type\": \"area\", \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Avg Response Time (ns)\"}}, {\"showCircles\": true, \"show\": true, \"type\": \"area\", \"interpolate\": \"cardinal\", \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true, \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"3\", \"label\": \"Max Response Time (ns)\"}}], \"type\": \"area\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"times\": [], \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\", \"mode\": \"normal\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Average event.duration\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}]}, \"aggs\": [{\"params\": {\"extended_bounds\": {}, \"field\": \"@timestamp\", \"interval\": \"auto\", \"useNormalizedEsInterval\": true, \"drop_partials\": false, \"min_doc_count\": 1, \"customInterval\": \"2h\"}, \"type\": \"date_histogram\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Min Response Time (ns)\"}, \"type\": \"min\", \"enabled\": true, \"id\": \"4\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Avg Response Time (ns)\"}, \"type\": \"avg\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"field\": \"event.duration\", \"customLabel\": \"Max Response Time (ns)\"}, \"type\": \"max\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"DNS Min/Max/Avg Response Time Histogram [Packetbeat] ECS\"}"
+            }, 
+            "id": "735d25c0-1459-11e9-9de0-f98d1808db8e-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "DNS Client and Servers Pie Chart [Packetbeat] ECS", 
+                "uiStateJSON": "{}", 
+                "version": 1, 
+                "visState": "{\"type\": \"pie\", \"params\": {\"isDonut\": true, \"addTooltip\": true, \"labels\": {\"values\": true, \"last_level\": true, \"truncate\": 100, \"show\": false}, \"legendPosition\": \"right\", \"addLegend\": true, \"type\": \"pie\"}, \"aggs\": [{\"params\": {}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Server\", \"missingBucketLabel\": \"Missing\", \"field\": \"destination.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"3\", \"schema\": \"segment\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Client\", \"missingBucketLabel\": \"Missing\", \"field\": \"source.ip\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 5}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"DNS Client and Servers Pie Chart [Packetbeat] ECS\"}"
+            }, 
+            "id": "bacb6ed0-1459-11e9-9de0-f98d1808db8e-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "server.ip", 
+                    "destination.ip", 
+                    "dns.question.name", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"dns\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"dns\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"dns\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "DNS Protocol [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "Overview of DNS request and response metrics.", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "optionsJSON": "{\"useMargins\": true, \"darkTheme\": false, \"hidePanelTitles\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 15, \"y\": 0, \"w\": 24, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"1\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"DNS-Query-Summary-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 15, \"y\": 0, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {}, \"panelIndex\": \"2\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"DNS-Request-Status-Over-Time-ecs\"}, {\"gridData\": {\"i\": \"3\", \"h\": 15, \"y\": 15, \"w\": 13, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"3\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"DNS-Question-Types-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 15, \"y\": 30, \"w\": 24, \"x\": 0}, \"embeddableConfig\": {}, \"panelIndex\": \"5\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"DNS-Top-10-Questions-ecs\"}, {\"gridData\": {\"i\": \"6\", \"h\": 15, \"y\": 30, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {}, \"panelIndex\": \"6\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"DNS-Response-Codes-ecs\"}, {\"gridData\": {\"i\": \"7\", \"h\": 15, \"y\": 15, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {}, \"panelIndex\": \"7\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"735d25c0-1459-11e9-9de0-f98d1808db8e-ecs\"}, {\"gridData\": {\"i\": \"8\", \"h\": 15, \"y\": 15, \"w\": 11, \"x\": 13}, \"embeddableConfig\": {}, \"panelIndex\": \"8\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"bacb6ed0-1459-11e9-9de0-f98d1808db8e-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] DNS Overview ECS", 
+                "version": 1
+            }, 
+            "id": "65120940-1454-11e9-9de0-f98d1808db8e-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

@@ -1,0 +1,115 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "Unique FQDNs per eTLD+1 ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"Count\": \"#1F78C1\", \"Unique count of dns.question.name\": \"#E0752D\"}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"listeners\": {}, \"params\": {\"scale\": \"linear\", \"yAxis\": {}, \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"mode\": \"grouped\", \"defaultYExtents\": true, \"setYExtents\": false, \"addTooltip\": true, \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"dns.question.name\", \"customLabel\": \"Unique Subdomain Count\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"dns.question.etld_plus_one\", \"customLabel\": \"Domains\", \"order\": \"desc\", \"size\": 20}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}], \"title\": \"Unique FQDNs per eTLD+1 ECS\"}"
+            }, 
+            "id": "Unique-FQDNs-per-eTLD 1-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:23.036Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": []}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "Unique FQDNs per eTLD+1 Table ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"listeners\": {}, \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"totalFunc\": \"sum\", \"showTotal\": false, \"showMeticsAtAllLevels\": false}, \"aggs\": [{\"params\": {\"customLabel\": \"\"}, \"type\": \"count\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"field\": \"dns.question.etld_plus_one\", \"customLabel\": \"ETLD+1\", \"order\": \"desc\", \"size\": 20}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}, {\"params\": {\"field\": \"dns.question.name\", \"customLabel\": \"Unique Domains\"}, \"type\": \"cardinality\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"Unique FQDNs per eTLD+1 Table ECS\"}"
+            }, 
+            "id": "Unique-FQDNs-per-eTLD 1-Table-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:23.036Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"lucene\"}}"
+                }, 
+                "savedSearchId": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+                "title": "Bytes Transferred per Domain ECS", 
+                "uiStateJSON": "{\"vis\": {\"colors\": {\"Bytes Out\": \"#629E51\", \"Count\": \"#1F78C1\", \"Unique count of dns.question.name\": \"#E0752D\", \"Bytes In\": \"#F2C96D\"}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"histogram\", \"params\": {\"scale\": \"linear\", \"seriesParams\": [{\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"1\", \"label\": \"Bytes Out\"}, \"mode\": \"normal\", \"show\": \"true\"}, {\"type\": \"histogram\", \"valueAxis\": \"ValueAxis-1\", \"data\": {\"id\": \"3\", \"label\": \"Bytes In\"}, \"mode\": \"normal\", \"show\": true}], \"yAxis\": {}, \"type\": \"histogram\", \"categoryAxes\": [{\"style\": {}, \"scale\": {\"type\": \"linear\"}, \"show\": true, \"title\": {}, \"labels\": {\"truncate\": 100, \"show\": true}, \"position\": \"bottom\", \"type\": \"category\", \"id\": \"CategoryAxis-1\"}], \"legendPosition\": \"right\", \"addTimeMarker\": false, \"addLegend\": true, \"shareYAxis\": true, \"grid\": {\"style\": {\"color\": \"#eee\"}, \"categoryLines\": false}, \"mode\": \"grouped\", \"defaultYExtents\": true, \"setYExtents\": false, \"addTooltip\": true, \"valueAxes\": [{\"style\": {}, \"scale\": {\"defaultYExtents\": true, \"setYExtents\": false, \"type\": \"linear\", \"mode\": \"grouped\"}, \"name\": \"LeftAxis-1\", \"show\": true, \"title\": {\"text\": \"Count\"}, \"labels\": {\"filter\": false, \"rotate\": 0, \"truncate\": 100, \"show\": true}, \"position\": \"left\", \"type\": \"value\", \"id\": \"ValueAxis-1\"}], \"times\": []}, \"aggs\": [{\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Bytes Out\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"1\", \"missingBucket\": false, \"customLabel\": \"Domains\", \"missingBucketLabel\": \"Missing\", \"field\": \"dns.question.etld_plus_one\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 20}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"segment\"}, {\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Bytes In\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"Bytes Transferred per Domain ECS\"}"
+            }, 
+            "id": "Bytes-Transferred-per-Domain-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:23.036Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "description": "", 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"index\": \"packetbeat-*\", \"query\": {\"query\": {\"query_string\": {\"analyze_wildcard\": true, \"query\": \"type:dns\"}}, \"language\": \"lucene\"}}"
+                }, 
+                "title": "Top Domains by Data Volume ECS", 
+                "uiStateJSON": "{\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}", 
+                "version": 1, 
+                "visState": "{\"type\": \"table\", \"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}, \"perPage\": 10, \"showPartialRows\": false, \"showMetricsAtAllLevels\": false, \"totalFunc\": \"sum\", \"showTotal\": false}, \"aggs\": [{\"params\": {\"field\": \"source.bytes\", \"customLabel\": \"Bytes In\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"1\", \"schema\": \"metric\"}, {\"params\": {\"orderBy\": \"3\", \"missingBucket\": false, \"customLabel\": \"ETLD+1\", \"missingBucketLabel\": \"Missing\", \"field\": \"dns.question.etld_plus_one\", \"otherBucketLabel\": \"Other\", \"otherBucket\": false, \"order\": \"desc\", \"size\": 20}, \"type\": \"terms\", \"enabled\": true, \"id\": \"2\", \"schema\": \"bucket\"}, {\"params\": {\"field\": \"destination.bytes\", \"customLabel\": \"Bytes Out\"}, \"type\": \"sum\", \"enabled\": true, \"id\": \"3\", \"schema\": \"metric\"}], \"title\": \"Top Domains by Data Volume ECS\"}"
+            }, 
+            "id": "dc743240-1665-11e7-a6de-cbac1a3d0a7d-ecs", 
+            "type": "visualization", 
+            "updated_at": "2019-01-18T23:49:23.036Z", 
+            "version": 1
+        }, 
+        {
+            "attributes": {
+                "columns": [
+                    "server.ip", 
+                    "destination.ip", 
+                    "dns.question.name", 
+                    "status"
+                ], 
+                "description": "", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"index\": \"packetbeat-*\", \"filter\": [{\"query\": {\"match\": {\"network.protocol\": {\"query\": \"dns\", \"type\": \"phrase\"}}}, \"meta\": {\"index\": \"packetbeat-*\", \"value\": \"dns\", \"disabled\": false, \"alias\": null, \"params\": {\"query\": \"dns\", \"type\": \"phrase\"}, \"key\": \"network.protocol\", \"negate\": false, \"type\": \"phrase\"}, \"$state\": {\"store\": \"appState\"}}], \"version\": true, \"query\": {\"query\": \"\", \"language\": \"lucene\"}, \"highlight\": {\"fields\": {\"*\": {}}, \"post_tags\": [\"@/kibana-highlighted-field@\"], \"pre_tags\": [\"@kibana-highlighted-field@\"], \"require_field_match\": false, \"fragment_size\": 2147483647}, \"highlightAll\": true}"
+                }, 
+                "sort": [
+                    "@timestamp", 
+                    "desc"
+                ], 
+                "title": "DNS Protocol [Packetbeat] ECS", 
+                "version": 1
+            }, 
+            "id": "d19e8485-7df5-47ce-8009-9dc3c42bcf17-ecs", 
+            "type": "search", 
+            "updated_at": "2019-01-18T23:49:24.089Z", 
+            "version": 2
+        }, 
+        {
+            "attributes": {
+                "description": "Detecting tunneling over DNS.", 
+                "hits": 0, 
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"NOT dns.question.type:PTR\", \"language\": \"lucene\"}, \"version\": true, \"highlightAll\": true}"
+                }, 
+                "optionsJSON": "{\"darkTheme\": false}", 
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"h\": 20, \"y\": 0, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {\"spy\": {\"mode\": {\"name\": null, \"fill\": false}}, \"vis\": {\"colors\": {\"Count\": \"#1F78C1\", \"Unique Subdomain Count\": \"#EF843C\", \"Unique count of dns.question.name\": \"#E0752D\"}, \"legendOpen\": false}}, \"panelIndex\": \"1\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Unique-FQDNs-per-eTLD 1-ecs\"}, {\"gridData\": {\"i\": \"2\", \"h\": 20, \"y\": 35, \"w\": 24, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"panelIndex\": \"2\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Unique-FQDNs-per-eTLD 1-Table-ecs\"}, {\"gridData\": {\"i\": \"4\", \"h\": 15, \"y\": 20, \"w\": 48, \"x\": 0}, \"embeddableConfig\": {\"vis\": {\"legendOpen\": false}}, \"panelIndex\": \"4\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"Bytes-Transferred-per-Domain-ecs\"}, {\"gridData\": {\"i\": \"5\", \"h\": 20, \"y\": 35, \"w\": 24, \"x\": 24}, \"embeddableConfig\": {\"vis\": {\"params\": {\"sort\": {\"columnIndex\": null, \"direction\": null}}}}, \"panelIndex\": \"5\", \"version\": \"7.0.0-SNAPSHOT\", \"type\": \"visualization\", \"id\": \"dc743240-1665-11e7-a6de-cbac1a3d0a7d-ecs\"}]", 
+                "timeRestore": false, 
+                "title": "[Packetbeat] DNS Tunneling ECS", 
+                "version": 1
+            }, 
+            "id": "DNS-Unique-Domains-ecs", 
+            "type": "dashboard", 
+            "updated_at": "2019-01-18T23:49:23.036Z", 
+            "version": 1
+        }
+    ], 
+    "version": "7.0.0-SNAPSHOT"
+}

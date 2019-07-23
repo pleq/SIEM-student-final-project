@@ -1,0 +1,7 @@
+[2019-06-11T02:06:39,434][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
+[2019-06-12T00:00:06,232][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
+[2019-06-12T00:31:07,279][WARN ][o.e.d.r.a.a.i.RestPutMappingAction] [elasticsearch01] [types removal] Using include_type_name in put mapping requests is deprecated. The parameter will be removed in the next major version.
+[2019-06-16T15:14:17,169][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
+[2019-06-17T13:54:14,844][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
+[2019-07-02T11:22:15,358][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
+[2019-07-09T07:10:59,377][WARN ][o.e.d.a.b.BulkRequestParser] [elasticsearch01] [types removal] Specifying types in bulk requests is deprecated.
